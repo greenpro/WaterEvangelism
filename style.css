@@ -12,6 +12,22 @@ h1 {
     background-color: lightgray;
 }
 
+a:active {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:link {
+    color: black;
+}
+
 button {
     width: 100%;
     height: line;
