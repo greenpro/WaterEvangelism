@@ -3,5 +3,17 @@ h1 {
     font-family:Verdana;
 }
 
-body {
+#menu {
+    width: 100%;
+    border: grey;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: lightgray;
+}
+
+button {
+    width: 100%;
+    height: line;
+    margin: 0px;
 }
