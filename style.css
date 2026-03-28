@@ -1,6 +1,13 @@
+html {
+    font-family: verdana;
+}
+
 h1 {
     text-align:center;
-    font-family:Verdana;
+}
+
+h3 {
+    text-align: center;
 }
 
 #menu {
@@ -32,4 +39,5 @@ button {
     width: 100%;
     height: line;
     margin: 0px;
+    font-size: 18pt;
 }
