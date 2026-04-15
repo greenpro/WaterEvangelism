@@ -33,6 +33,11 @@
             faq: {"enabled":true}
           };
         </script>
+        <script type="text/javascript">
+        	function displayAfter(dateString) {
+                return new Date() > new Date(dateString);
+			}
+        </script>
     </header>
     <body>
       <div>
@@ -68,10 +73,6 @@
         <hr />
       </div>
 <div hidden>
-Day 11
-You will keep him in perfect peace, Whose mind is stayed on You, Because he trusts in You.
-Isaiah 26:3
-Pray for the health and hearts of those who will be driving and delivering the bottled water.
 
 Day 12
 The eternal God is your refuge, And underneath are the everlasting arms; He will thrust out the enemy from before you, And will say, ‘Destroy!’
@@ -228,6 +229,16 @@ The Lord is not slack concerning His promise, as some count slackness, but is lo
 2 Peter 3:9
 Pray for every heart of each volunteer, fan, player, and person involved to be transformed by the Holy Spirit.
       </div>
+      <div class="day" style="display = $(displayAfter("apr 14, 2025") ? block : none)">
+    	<b>Day 11</b>
+		<p>
+        	You will keep him in perfect peace,<br />
+            Whose mind is stayed on You,<br />
+            Because he trusts in You.<br />
+			Isaiah 26:3<br />
+            <br />
+            Pray for the health and hearts of those who will be driving and delivering the bottled water.
+	  </div>
       <hr />
       <div class="day">
         <b>Day 10</b>
@@ -238,8 +249,7 @@ Pray for every heart of each volunteer, fan, player, and person involved to be t
         </p>
         <br />
 		Pray for the truck to be operational, and it has no mechanical problems throughout the summer.
-
-
+      </div>
       <hr />
       <div class="day">
         <b>Day 9</b>
