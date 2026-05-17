@@ -1,27 +1,24 @@
 html {
     font-family: verdana;
+    background-color: #2D92B8;
 }
 
 #title {
-    background-image: url("water.png");
     background-size: 100%;
 }
 
 h1 {
     text-align:center;
+    color: #FFFFFF;
 }
 
 h3 {
     text-align: center;
+    color: #FFFFFF;
 }
 
 #menu {
     width: 100%;
-    border: grey;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: lightgray;
 }
 
 a:active {
@@ -40,11 +37,22 @@ a:link {
     color: black;
 }
 
+.button-top {
+    border-radius: 15px 15px 0px 0px;
+    border-width: 3px;
+}
+
+.button-bottom {
+    border-radius: 0px 0px 15px 15px;
+}
+
 button {
     width: 100%;
     height: line;
     margin: 0px;
     font-size: 18pt;
+    border-width: 0px 3px 3px 3px;
+    background-color: #F88747;
 }
 
 .day {
@@ -60,4 +68,16 @@ button {
     border-style: solid;
     border-collapse: collapse;
     border-color: gray;
+}
+
+#description {
+    color: #FFFFFF;
+}
+
+#contact {
+    color: #FFFFFF;
+}
+
+footer {
+    color: #FFFFFF;
 }
