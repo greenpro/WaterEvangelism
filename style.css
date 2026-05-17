@@ -67,6 +67,7 @@ button {
     border-width: 3px;
     border-radius: 30px;
     padding: 30px;
+    font-size: 20pt;
 }
 
 #waterPickup, tr, td {
