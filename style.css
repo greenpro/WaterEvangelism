@@ -33,6 +33,7 @@ html {
     width: 100%;
     display: none;
     padding-bottom: 40px;
+    position: absolute;
 }
 
 #icon {
@@ -69,6 +70,12 @@ a {
     border-radius: 0px 0px 15px 15px;
 }
 
+.button-stand-alone {
+    border-width: 3px;
+    border-radius: 15px;
+    width: fit-content;
+}
+
 button {
     width: 100%;
     height: line;
@@ -91,6 +98,10 @@ button {
     margin-bottom: 40px;
     font-size: 20pt;
     color: #000000;
+}
+
+.clean-zones {
+    width: 100%;
 }
 
 #waterPickup, tr, td {
