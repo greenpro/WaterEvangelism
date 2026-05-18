@@ -51,28 +51,32 @@
                     Go Share Jesus with all the World – Right here in Kansas City.
                 </h3>
             </div>
-            <div id="icon" onclick="toggleMenu()">
-                <i class="fa fa-bars"></i>
+            <div id="menu-div">
+                <div id="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div id="menu">
+                    <button class="button-top" onclick="location.href='index.html'">
+                        Home
+                    </button>
+                    <button onclick="location.href='volunteer.html'">
+                        Volunteer Sign-up
+                    </button>
+                    <button onclick="location.href='40days.html'">
+                        40 Days of Prayer
+                    </button>
+                    <button onclick="location.href='glow.html'">
+                        GLOW Tracks Online
+                    </button>
+                    <button class="button-bottom" conclick="location.href='ontact.html'">
+                        Contact
+                    </button>
+                </div>
             </div>
-            <div id="menu">
-                <button class="button-top" onclick="location.href='index.html'">
-                    Home
-                </button>
-                <button onclick="location.href='volunteer.html'">
-                    Volunteer Sign-up
-                </button>
-                <button onclick="location.href='40days.html'">
-                    40 Days of Prayer
-                </button>
-                <button onclick="location.href='glow.html'">
-                    GLOW Tracks Online
-                </button>
-                <button class="button-bottom" conclick="location.href='ontact.html'">
-                    Contact
-                </button>
-            </div>
-            <div id="pickup" class="day">
-                <b>Water Pickup</b>
+            <div id="pickup" class="section">
+                <div class="section-title">
+                    <b>Water Pickup</b>
+                </div>
                 <table id="waterPickup">
                     <tr>
                         <th>
@@ -170,8 +174,10 @@
                     </tr>
                 </table>
             </div>
-            <div id="location" class="day">
-                <b>Suggested Water Sharing Locations:</b><br />
+            <div id="location" class="section">
+                <div class="section-title">
+                    <b>Suggested Water Sharing Locations:</b><br />
+                </div>
                 Along Street Car Trolley Line<br />
                 Power & Light District<br />
                 Independence Square<br />
@@ -186,8 +192,10 @@
                 KS Highways 69 / 52 Rest Area to Route 66<br />
                 Any July 4th Celebration to share!
             </div>
-            <div id="tips" class="day">
-                <b>Teams:</b><br />
+            <div id="tips" class="section">
+                <div class="section-title">
+                    <b>Teams:</b>
+                </div>
                 <ul>
                     <li>
                         Report area water distributed in each time so we can track coverage within KC.
@@ -233,8 +241,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="day">
-                <b>Water:</b><br />
+            <div class="section">
+                <div class="section-title">
+                    <b>Water:</b>
+                </div>
                 <ul>
                     <li>
                         Report area water distributed in each time so we can track coverage within KC.
@@ -280,10 +290,12 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="day">
-            <b>Clean Zones:</b>
-            <img src="memorial.png" alt="Liberty Memorial Clean Zone" class="clean-zones"/>
+            <div class="section">
+                <div class="section-title">
+                    <b>Clean Zones:</b>
+                </div>
+                <img src="memorial.png" alt="Liberty Memorial Clean Zone" class="clean-zones"/>
+            </div>
         </div>
     </body>
     <footer>

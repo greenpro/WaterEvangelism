@@ -29,11 +29,15 @@ html {
     padding: 20px;
 }
 
+#menu-div {
+    position: relative;
+}
+
 #menu {
-    width: 100%;
+    width: 30%;
     display: none;
-    padding-bottom: 40px;
     position: absolute;
+    top: 45px;
 }
 
 #icon {
@@ -88,7 +92,7 @@ button {
     padding: 9pt;
 }
 
-.day {
+.section {
     background-color: #9ADFF8;
     border-color: #000000;
     border-style: solid;
@@ -98,6 +102,18 @@ button {
     margin-bottom: 40px;
     font-size: 20pt;
     color: #000000;
+    align-items: center;
+}
+
+.section-title {
+    background-color: #FFFFFF;
+    border-width: 0px 0px 4px 0px;
+    border-radius: 26px;
+    border-style: solid;
+    border-color: #000000;
+    margin: -30px -30px 30px -30px;
+    padding: 20px;
+    text-align: center;
 }
 
 .clean-zones {
