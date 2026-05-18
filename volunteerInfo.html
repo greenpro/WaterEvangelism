@@ -1,8 +1,10 @@
 <!DOCTYPE html> 
 <html>
     <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="style.css"> 
         
+        <script type="text/javascript" src="functions.js"></script>
         <script type="text/javascript" async src="https://cdn.reamaze.com/assets/reamaze-loader.js"></script>
         <script type="text/javascript">
           var _support = _support || { 'ui': {}, 'user': {} };
@@ -36,13 +38,22 @@
     </header>
     <body>
         <div>
-            <h1>
-                Volunteer Info
-            </h1>
-            <h3>
-                Go Share Jesus with all the World – Right here in Kansas City.
-            </h3>
-            <hr />
+            <div id="title">
+                <div id="main-title">
+                    <h1>
+                        Water Evangelism
+                    </h1>
+                    <h2>
+                        Volunteer Info
+                    </h2>
+                </div>
+                <h3>
+                    Go Share Jesus with all the World – Right here in Kansas City.
+                </h3>
+            </div>
+            <div id="icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
             <div id="menu">
                 <a href="index.html">
                     <button class="button-top">
@@ -70,7 +81,6 @@
                     </button>
                 </a>
             </div>
-            <hr />
             <div id="pickup" class="day">
                 <b>Water Pickup</b>
                 <table id="waterPickup">
@@ -175,8 +185,6 @@
                     </tr>
                 </table>
             </div>
-            <br />
-            <br />
             <div id="location" class="day">
                 <b>Suggested Water Sharing Locations:</b><br />
                 Along Street Car Trolley Line<br />
@@ -193,8 +201,6 @@
                 KS Highways 69 / 52 Rest Area to Route 66<br />
                 Any July 4th Celebration to share!
             </div>
-            <br />
-            <br />
             <div id="tips" class="day">
                 <b>Teams:</b><br />
                 <ul>
@@ -241,7 +247,8 @@
                         Donations purchased water and QR stickers, please use for distribution only.<br />
                     </li>
                 </ul>
-                <br />
+            </div>
+            <div class="day">
                 <b>Water:</b><br />
                 <ul>
                     <li>
