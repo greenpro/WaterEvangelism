@@ -31,18 +31,20 @@ html {
 
 #menu-div {
     position: relative;
+    margin-left: 3%;
 }
 
 #menu {
     width: 30%;
     display: none;
     position: absolute;
-    top: 45px;
+    left: 45px;
+    top: 10px;
 }
 
 #icon {
     font-size: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 a:active {
@@ -66,12 +68,12 @@ a {
 }
 
 .button-top {
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 30px 30px 0px 0px;
     border-width: 3px;
 }
 
 .button-bottom {
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 30px 30px;
 }
 
 .button-stand-alone {
@@ -128,4 +130,22 @@ button {
 
 footer {
     color: #FFFFFF;
+}
+
+li {
+    list-style: none;
+}
+
+/* Set the list image as background image*/
+li::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+
+    /* Height of the list image*/
+    height: 20px;
+
+    /* Width of the list image*/
+    width: 20px;
+    list-style-image: url("waterbottle.png");
 }
