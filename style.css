@@ -80,6 +80,7 @@ a {
     border-width: 3px;
     border-radius: 15px;
     width: fit-content;
+    margin-left: 3%;
 }
 
 button {
@@ -130,6 +131,7 @@ button {
 
 footer {
     color: #FFFFFF;
+    margin-top: 45px;
 }
 
 li {
