@@ -1,5 +1,5 @@
 html {
-    font-family: verdana;
+    font-family: "Saira", sans-serif;
     background-color: #2D92B8;
 }
 
@@ -13,6 +13,7 @@ html {
     margin: 10px 10%;
     width: 80%;
     padding: 0px;
+    font-family: "Balsamiq Sans", sans-serif;
 }
 
 #main-title {
