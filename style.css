@@ -134,7 +134,7 @@ footer {
     margin-top: 45px;
 }
 
-li {
+ul > li {
     list-style-image: url("waterbottle.png");
     margin-bottom: 15px;
     font-size: 30px;
