@@ -132,6 +132,7 @@ button {
 footer {
     color: #FFFFFF;
     margin-top: 45px;
+    width: 100%; 
 }
 
 ul > li {
