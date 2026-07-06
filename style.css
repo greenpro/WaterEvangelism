@@ -139,3 +139,21 @@ ul > li {
     margin-bottom: 15px;
     font-size: 30px;
 }
+
+.flag-icon {
+    width: 300px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-selection {
+    margin: 10px;
+    text-align: center;
+    height: 375px;
+    width: 375px;
+}

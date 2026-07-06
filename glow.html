@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
+        <title>Water Evangelism</title>
+        <link rel="icon" type="image/x-icon" href="waterbottle.png">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css"> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <script type="text/javascript" src="functions.js"></script>
+        <script type="text/javascript" async src="https://cdn.reamaze.com/assets/reamaze-loader.js"></script>
+        <script type="text/javascript">
+          var _support = _support || { 'ui': {}, 'user': {} };
+          _support['account'] = '37857738-2260-11f1-86ed-7cd30aca5428';
+          _support['ui']['contactMode'] = 'mixed';
+          _support['ui']['enableKb'] = 'true';
+          _support['ui']['mailbox'] = '79257991';
+          _support['ui']['styles'] = {
+            widgetColor: 'rgba(16, 162, 197, 1)',
+            gradient: true,
+          };
+          _support['ui']['shoutboxFacesMode'] = '';
+          _support['ui']['widget'] = {
+            allowBotProcessing: 'false',
+            slug: 'water-evangelism-webchat',
+            label: {
+              text: 'Let us know if you have any questions! 😊',
+              mode: "notification",
+              delay: 3,
+              duration: 30,
+              primary: '',
+              sound: true,
+            },
+            position: 'bottom-right'
+          };
+          _support['apps'] = {
+            recentConversations: {},
+            faq: {"enabled":true}
+          };
+        </script>
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1BYD09VLW"></script>
         <script>
@@ -12,10 +54,317 @@
         </script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G52M93EFQN"></script>
-    </header>
+
+        <div>
+            <div id="title">
+                <div id="main-title">
+                    <h1>
+                        Choose Your Language
+                    </h1>
+                </div>
+                <h3>
+                    Find out more about Jesus
+                </h3>
+            </div>
+            <div id="menu-div">
+                <div href="javascript:void(0);" id="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div id="menu">
+                    <button class="button-top" onclick="location.href='index.html'">
+                        Home
+                    </button>
+                    <button class="button-top" onclick="location.href='volunteer.html'">
+                        Volunteer Sign-up
+                    </button>
+                    <button onclick="location.href='volunteerInfo.html'">
+                        Volunteer Info
+                    </button>
+                    <button onclick="location.href='40days.html'">
+                        40 Days of Prayer
+                    </button>
+                    <button class="button-bottom" onclick="location.href='contact.html'">
+                        Contact
+                    </button>
+                </div>
+            </div>
+        </div>
+    </head>
     <body>
-        <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2018/12/GLOW-Vertical-B.png" 
-            onload="window.location='https://www.glowonline.org/digital/'" 
-            onerror="window.location='https://www.voiceofprophecy.com'" />
+        <div class="flex-container">
+            <div id="english" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['english']">
+                    <img src="countries/us.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['english'] = primary['english']" 
+                         onerror="decision['english'] = alternate['english']" 
+                         hidden/>
+                    <br />
+                    English
+                </button>
+            </div>
+            <div id="spanish" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['spanish']">
+                    <img src="countries/spain.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['spanish'] = primary['spanish']" 
+                         onerror="decision['spanish'] = alternate['spanish']" 
+                         hidden/>
+                    <br />
+                    Spanish / Español
+                </button>
+            </div>
+            <div id="portuguese" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['portuguese']">
+                    <img src="countries/brazil.png" class="flag-icon" />
+                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
+                         onload="decision['portuguese'] = primary['portuguese']" 
+                         onerror="decision['portuguese'] = alternate['portuguese']" 
+                         hidden/>
+                    <br />
+                    Portuguese / Português
+                </button>
+            </div>
+            <div id="french" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['french']">
+                    <img src="countries/france.png" class="flag-icon" />
+                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
+                         onload="decision['french'] = primary['french']" 
+                         onerror="decision['french'] = alternate['french']" 
+                         hidden/>
+                    <br />
+                    French / Français
+                </button>
+            </div>
+            <div id="german" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['german']">
+                    <img src="countries/germany.png" class="flag-icon" />
+                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
+                         onload="decision['german'] = primary['german']" 
+                         onerror="decision['german'] = alternate['german']" 
+                         hidden/>
+                    <br />
+                    German / Deutsch
+                </button>
+            </div>
+            <div id="russian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['russian']">
+                    <img src="countries/russia.png" class="flag-icon" />
+                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
+                         onload="decision['russian'] = primary['russian']" 
+                         onerror="decision['russian'] = alternate['russian']" 
+                         hidden/>
+                    <br />
+                    Russian / Русский
+                </button>
+            </div>
+            <div id="romanian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['romanian']">
+                    <img src="countries/romania.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['romanian'] = primary['romanian']" 
+                         onerror="decision['romanian'] = alternate['romanian']" 
+                         hidden/>
+                    <br />
+                    Romanian / Română
+                </button>
+            </div>
+            <div id="ukrainian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['ukrainian']">
+                    <img src="countries/ukraine.png" class="flag-icon" />
+                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
+                         onload="decision['ukrainian'] = primary['ukrainian']" 
+                         onerror="decision['ukrainian'] = alternate['ukrainian']" 
+                         hidden/>
+                    <br />
+                    Ukrainian / Українська
+                </button>
+            </div>
+            <div id="tagalog" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['tagalog']">
+                    <img src="countries/philippines.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['tagalog'] = primary['tagalog']" 
+                         onerror="decision['tagalog'] = alternate['tagalog']" 
+                         hidden/>
+                    <br />
+                    Tagalog / Tagalog
+                </button>   
+            </div>
+            <div id ="cebuano" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['cebuano']">
+                    <img src="countries/philippines.png" class="flag-icon" />
+                    <br />
+                    Cebuano / Cebuano
+                </button>
+            </div>
+            <div id="hindi" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['hindi']">
+                    <img src="countries/india.png" class="flag-icon" />
+                    <br />
+                    Hindi / हिंदी
+                </button>
+            </div>
+            <div id="arabic" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['arabic']">
+                    <img src="countries/saudiArabia.png" class="flag-icon" />
+                    Arabic / العربية
+                </button>
+            </div>
+            <div id="nederlands" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['nederlands']">
+                    <img src="countries/netherlands.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['nederlands'] = primary['nederlands']" 
+                         onerror="decision['nederlands'] = alternate['nederlands']" 
+                         hidden/>
+                    <br />
+                    Nederlands / Dutch
+                </button>
+            </div>
+            <div id="czech" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['czech']">
+                    <img src="countries/czech.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['czech'] = primary['czech']" 
+                         onerror="decision['czech'] = alternate['czech']" 
+                         hidden/>
+                    <br />
+                    Czech / Čeština
+                </button>
+            </div>
+            <div id="hungarian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['hungarian']">
+                    <img src="countries/hungary.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['hungarian'] = primary['hungarian']" 
+                         onerror="decision['hungarian'] = alternate['hungarian']" 
+                         hidden/>
+                    <br />
+                    Hungarian / Magyar
+                </button>
+            </div>
+            <div id="indonesian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['indonesian']">
+                    <img src="countries/indonesia.png" class="flag-icon" />
+                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
+                         onload="decision['indonesian'] = primary['indonesian']" 
+                         onerror="decision['indonesian'] = alternate['indonesian']" 
+                         hidden/>
+                    <br />
+                    Indonesian / Bahasa Indonesia
+                </button>
+            </div>
+            <div id="amharic" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['amharic']">
+                    <img src="countries/ethiopia.png" class="flag-icon" />
+                    <br />
+                    Amharic / አማርኛ
+                </button>
+            </div>
+            <div id="slovenia" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['slovenia']">
+                    <img src="countries/slovenia.png" class="flag-icon" />
+                    <br />
+                    Slovenia / Slovenščina
+                </button>
+            </div>
+            <div id="armenian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['armenian']">
+                    <img src="countries/armenia.png" class="flag-icon" />
+                    Armenian / Հայերեն
+                </button>
+            </div>
+            <div id="norwegian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['norwegian']">
+                    <img src="countries/norway.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['norwegian'] = primary['norwegian']" 
+                         onerror="decision['norwegian'] = alternate['norwegian']" 
+                         hidden/>
+                    <br />
+                    Norwegian / Norsk
+                </button>
+            </div>
+            <div id="polski" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['polski']">
+                    <img src="countries/poland.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['polski'] = primary['polski']" 
+                         onerror="decision['polski'] = alternate['polski']" 
+                         hidden/>
+                    <br />
+                    Polski / Polish
+                </button>
+            </div>
+            <div id="italian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['italian']">
+                    <img src="countries/italy.png" class="flag-icon" />
+                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
+                         onload="decision['italian'] = primary['italian']" 
+                         onerror="decision['italian'] = alternate['italian']" 
+                         hidden/>
+                    <br />
+                    Italian / Italiano
+                </button>
+            </div>
+            <div id="slovak" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['slovak']">
+                    <img src="countries/slovakia.png" class="flag-icon" />
+                    <br />
+                    Slovak / Slovenčina
+                </button>
+            </div>
+            <div id="visayan" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['visayan']">
+                    <img src="countries/philippines.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['visayan'] = primary['visayan']" 
+                         onerror="decision['visayan'] = alternate['visayan']" 
+                         hidden/>
+                    <br />
+                    Visayan / Binisaya
+                </button>
+            </div>
+            <div id="japanese" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['japanese']">
+                    <img src="countries/japan.png" class="flag-icon" />
+                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
+                         onload="decision['japanese'] = primary['japanese']" 
+                         onerror="decision['japanese'] = alternate['japanese']" 
+                         hidden/>
+                    <br />
+                    Japanese / 日本語
+                </button>
+            </div>
+            <div id="chinese" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['chinese']">
+                    <img src="countries/china.png" class="flag-icon" />
+                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+                         onload="decision['chinese'] = primary['chinese']" 
+                         onerror="decision['chinese'] = alternate['chinese']" 
+                         hidden/>
+                    <br />
+                    Chinese / 中文
+                </button>
+            </div>
+            <div id="korean" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['korean']">
+                    <img src="countries/southKorea.png" class="flag-icon" />
+                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
+                         onload="decision['korean'] = primary['korean']" 
+                         onerror="decision['korean'] = alternate['korean']" 
+                         hidden/>
+                    <br />
+                    Korean / 한국어
+                </button>
+            </div>
+        </flex-container>
     </body>
+    <footer>
+        <hr />
+        &copy; Copyright Craig Christensen 2026
+        <a href="PrivacyPolicy.pdf">Privacy Policy</a>
+        <a href="TermsOfUsePolicy.pdf">Terms of Use</a>
+    </footer>
 </html>
