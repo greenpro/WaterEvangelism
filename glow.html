@@ -359,7 +359,39 @@
                     Korean / 한국어
                 </button>
             </div>
-        </flex-container>
+            <div id="swedish" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=decision['swedish']">
+                    <img src="countries/sweden.webp" class="flag-icon" />
+                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
+                         onload="decision['swedish'] = primary['swedish']" 
+                         onerror="decision['swedish'] = alternate['swedish']" 
+                         hidden/>
+                    <br />
+                    Swedish / Svenska
+                </button>
+            </div>
+            <div id="icelandic" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['icelandic']">
+                    <img src="countries/iceland.webp" class="flag-icon" />
+                    <br />
+                    Icelandic / Íslenska
+                </button>
+            </div>
+            <div id="finish" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['finish']">
+                    <img src="countries/finland.webp" class="flag-icon" />
+                    <br />
+                    Finnish / Suomi
+                </button>
+            </div>
+            <div id="bulgarian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=primary['bulgarian']">
+                    <img src="countries/bulgaria.webp" class="flag-icon" />
+                    <br />
+                    Bulgarian / Български
+                </button>
+            </div>
+        </div>
         <br />
     </body>
     <footer>

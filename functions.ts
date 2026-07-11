@@ -68,7 +68,11 @@ var primary = {
     "visayan":      "https://www.glowonline.org/glow-visayan",
     "japanese":     "https://www.hopechannel.jp",
     "chinese":      "https://www.glowonline.org/glow-chinese",
-    "korean":       "https://hopechannel.kr"
+    "korean":       "https://hopechannel.kr",
+    "swedish":      "https://www.amazingfacts.org/sv/hem",
+    "icelandic":    "https://hopechannel.is",
+    "finnish":      "https://hopechannel.fi",
+    "bulgarian":    "https://hopetv.bg",
 }
 
 var alternate = {
