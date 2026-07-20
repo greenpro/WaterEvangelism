@@ -10,11 +10,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 function toggleMenu() {
     var menu = document.getElementById("menu");
-    if (menu && menu.style.display === "block") {
+    var menuOff = document.getElementById("menu-off");
+    if (menu && menuOff && menu.style.display === "block") {
         menu.style.display = "none";
+        menuOff.style.display = "none";
     }
-    else if (menu) {
+    else if (menu && menuOff) {
         menu.style.display = "block";
+        menuOff.style.display = "block";
     }
 }
 function redirect(primary, backup) {

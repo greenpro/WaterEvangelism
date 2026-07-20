@@ -44,6 +44,15 @@ html {
     padding-bottom: 10px;
 }
 
+#menu-off{
+    width: 100%;
+    display: none;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
 a:active {
     color: black;
 }
@@ -80,6 +89,15 @@ a {
     margin-left: 3%;
 }
 
+.button-inactive {
+    color: #888888;
+    background-color: #FFB777;
+}
+
+.button-tabbed {
+    padding-left: 27pt;
+}
+
 button {
     width: 100%;
     height: line;
@@ -90,6 +108,7 @@ button {
     border-color: #000000;
     color: #000000;
     padding: 9pt;
+    text-align: left;
 }
 
 .section {
@@ -142,7 +161,8 @@ ul > li {
 }
 
 .flag-icon {
-    width: 300px;
+    max-width: 300px;
+    max-height: 200px;
 }
 
 .flex-container {

@@ -1,14 +1,17 @@
 function toggleMenu()
 {
     var menu = document.getElementById("menu")
+    var menuOff = document.getElementById("menu-off")
 
-    if (menu && menu.style.display === "block")
+    if (menu && menuOff && menu.style.display === "block")
     {
         menu.style.display = "none"
+        menuOff.style.display = "none"
     }
-    else if (menu)
+    else if (menu && menuOff)
     {
         menu.style.display = "block"
+        menuOff.style.display = "block"
     }
 }
 
