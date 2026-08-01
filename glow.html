@@ -95,443 +95,374 @@
                 </button>
             </div>
         </div>
+
+        <!--Destination checks-->
+        <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
+             onload="availability['glow'] = true" 
+             onerror="availability['glow'] = false" 
+             hidden/>
+        <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
+             onload="availability['amazing'] = true" 
+             onerror="availability['amazing'] = false" 
+             hidden/>
+        <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
+             onload="availability['hope'] = true" 
+             onerror="availability['hope'] = false" 
+             hidden/>
+        <img src="https://media2.whiteestate.org/original_images/egwbio_2.jpg" 
+             onload="availability['egw'] = true" 
+             onerror="availability['egw'] = false" 
+             hidden/>
+
+        <!--countries-->
         <div class="flex-container">
             <div id="english" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['english']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('english')">
                     <img src="countries/us.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['english'] = primary['english']" 
-                         onerror="decision['english'] = alternate['english']" 
-                         hidden/>
                     <br />
                     English
                 </button>
             </div>
             <div id="spanish" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['spanish']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('spanish')">
                     <img src="countries/spain.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['spanish'] = primary['spanish']" 
-                         onerror="decision['spanish'] = alternate['spanish']" 
-                         hidden/>
                     <br />
                     Spanish / Español
                 </button>
             </div>
             <div id="portuguese" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['portuguese']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('portuguese')">
                     <img src="countries/brazil.png" class="flag-icon" />
-                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
-                         onload="decision['portuguese'] = primary['portuguese']" 
-                         onerror="decision['portuguese'] = alternate['portuguese']" 
-                         hidden/>
                     <br />
                     Portuguese / Português
                 </button>
             </div>
             <div id="french" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['french']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('french')">
                     <img src="countries/france.png" class="flag-icon" />
-                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
-                         onload="decision['french'] = primary['french']" 
-                         onerror="decision['french'] = alternate['french']" 
-                         hidden/>
                     <br />
                     French / Français
                 </button>
             </div>
             <div id="german" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['german']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('german')">
                     <img src="countries/germany.png" class="flag-icon" />
-                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
-                         onload="decision['german'] = primary['german']" 
-                         onerror="decision['german'] = alternate['german']" 
-                         hidden/>
                     <br />
                     German / Deutsch
                 </button>
             </div>
             <div id="russian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['russian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('russian')">
                     <img src="countries/russia.png" class="flag-icon" />
-                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
-                         onload="decision['russian'] = primary['russian']" 
-                         onerror="decision['russian'] = alternate['russian']" 
-                         hidden/>
                     <br />
                     Russian / Русский
                 </button>
             </div>
             <div id="romanian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['romanian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('romanian')">
                     <img src="countries/romania.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['romanian'] = primary['romanian']" 
-                         onerror="decision['romanian'] = alternate['romanian']" 
-                         hidden/>
                     <br />
                     Romanian / Română
                 </button>
             </div>
             <div id="ukrainian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['ukrainian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('ukrainian')">
                     <img src="countries/ukraine.png" class="flag-icon" />
-                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
-                         onload="decision['ukrainian'] = primary['ukrainian']" 
-                         onerror="decision['ukrainian'] = alternate['ukrainian']" 
-                         hidden/>
                     <br />
                     Ukrainian / Українська
                 </button>
             </div>
             <div id="tagalog" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['tagalog']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('tagalog')">
                     <img src="countries/philippines.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['tagalog'] = primary['tagalog']" 
-                         onerror="decision['tagalog'] = alternate['tagalog']" 
-                         hidden/>
                     <br />
                     Tagalog / Tagalog
                 </button>   
             </div>
             <div id ="cebuano" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['cebuano']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('cebuano')">
                     <img src="countries/philippines.png" class="flag-icon" />
-                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
-                         onload="decision['cebuano'] = primary['cebuano']" 
-                         onerror="decision['cebuano'] = alternate['cebuano']" 
-                         hidden/>
                     <br />
                     Cebuano / Cebuano
                 </button>
             </div>
             <div id="hindi" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['hindi']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('hindi')">
                     <img src="countries/india.png" class="flag-icon" />
-                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
-                         onload="decision['hindi'] = primary['hindi']" 
-                         onerror="decision['hindi'] = alternate['hindi']" 
-                         hidden/>
                     <br />
                     Hindi / हिंदी
                 </button>
             </div>
             <div id="arabic" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['arabic']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('arabic')">
                     <img src="countries/saudiArabia.png" class="flag-icon" />
-                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
-                         onload="decision['arabic'] = primary['arabic']" 
-                         onerror="decision['arabic'] = alternate['arabic']" 
-                         hidden/>
                     <br />
                     Arabic / العربية
                 </button>
             </div>
             <div id="nederlands" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['nederlands']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('nederlands')">
                     <img src="countries/netherlands.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['nederlands'] = primary['nederlands']" 
-                         onerror="decision['nederlands'] = alternate['nederlands']" 
-                         hidden/>
                     <br />
                     Nederlands / Dutch
                 </button>
             </div>
             <div id="czech" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['czech']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('czech')">
                     <img src="countries/czech.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['czech'] = primary['czech']" 
-                         onerror="decision['czech'] = alternate['czech']" 
-                         hidden/>
                     <br />
                     Czech / Čeština
                 </button>
             </div>
             <div id="hungarian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['hungarian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('hungarian')">
                     <img src="countries/hungary.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['hungarian'] = primary['hungarian']" 
-                         onerror="decision['hungarian'] = alternate['hungarian']" 
-                         hidden/>
                     <br />
                     Hungarian / Magyar
                 </button>
             </div>
             <div id="indonesian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['indonesian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('indonesian')">
                     <img src="countries/indonesia.png" class="flag-icon" />
-                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
-                         onload="decision['indonesian'] = primary['indonesian']" 
-                         onerror="decision['indonesian'] = alternate['indonesian']" 
-                         hidden/>
                     <br />
                     Indonesian / Bahasa Indonesia
                 </button>
             </div>
             <div id="amharic" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['amharic']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('amharic')">
                     <img src="countries/ethiopia.png" class="flag-icon" />
                     <br />
                     Amharic / አማርኛ
                 </button>
             </div>
             <div id="slovenia" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['slovenia']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('slovenia')">
                     <img src="countries/slovenia.png" class="flag-icon" />
                     <br />
                     Slovenia / Slovenščina
                 </button>
             </div>
             <div id="armenian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['armenian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('armenian')">
                     <img src="countries/armenia.png" class="flag-icon" />
                     Armenian / Հայերեն
                 </button>
             </div>
             <div id="norwegian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['norwegian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('norwegian')">
                     <img src="countries/norway.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['norwegian'] = primary['norwegian']" 
-                         onerror="decision['norwegian'] = alternate['norwegian']" 
-                         hidden/>
                     <br />
                     Norwegian / Norsk
                 </button>
             </div>
             <div id="polski" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['polski']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('polski')">
                     <img src="countries/poland.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['polski'] = primary['polski']" 
-                         onerror="decision['polski'] = alternate['polski']" 
-                         hidden/>
                     <br />
                     Polski / Polish
                 </button>
             </div>
             <div id="italian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['italian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('italian')">
                     <img src="countries/italy.png" class="flag-icon" />
-                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
-                         onload="decision['italian'] = primary['italian']" 
-                         onerror="decision['italian'] = alternate['italian']" 
-                         hidden/>
                     <br />
                     Italian / Italiano
                 </button>
             </div>
             <div id="slovak" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['slovak']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('slovak')">
                     <img src="countries/slovakia.png" class="flag-icon" />
                     <br />
                     Slovak / Slovenčina
                 </button>
             </div>
             <div id="visayan" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['visayan']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('visayan')">
                     <img src="countries/philippines.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['visayan'] = primary['visayan']" 
-                         onerror="decision['visayan'] = alternate['visayan']" 
-                         hidden/>
                     <br />
                     Visayan / Binisaya
                 </button>
             </div>
             <div id="japanese" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['japanese']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('japanese')">
                     <img src="countries/japan.png" class="flag-icon" />
-                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
-                         onload="decision['japanese'] = primary['japanese']" 
-                         onerror="decision['japanese'] = alternate['japanese']" 
-                         hidden/>
                     <br />
                     Japanese / 日本語
                 </button>
             </div>
             <div id="chinese" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['chinese']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('chinese')">
                     <img src="countries/china.png" class="flag-icon" />
-                    <img src="https://cdn-glowonline.b-cdn.net/wp-content/uploads/2021/04/header-title.png" 
-                         onload="decision['chinese'] = primary['chinese']" 
-                         onerror="decision['chinese'] = alternate['chinese']" 
-                         hidden/>
                     <br />
                     Chinese / 中文
                 </button>
             </div>
             <div id="korean" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['korean']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('korean')">
                     <img src="countries/southKorea.png" class="flag-icon" />
-                    <img src="https://images.hopesoftware.org/resize/L3dfNTAwX19xXzgwL2hvcGUtaW1hZ2VzLzYyNTU1ZTU4NTYxYWIwOGRjMTBiMGY2ZC80NVQxNzIxMzQwMTExMzE2LnN2Zw/w_500__q_80/hope-images/62555e58561ab08dc10b0f6d/45T1721340111316.svg" 
-                         onload="decision['korean'] = primary['korean']" 
-                         onerror="decision['korean'] = alternate['korean']" 
-                         hidden/>
                     <br />
                     Korean / 한국어
                 </button>
             </div>
             <div id="swedish" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=decision['swedish']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('swedish')">
                     <img src="countries/sweden.webp" class="flag-icon" />
-                    <img src="https://www.amazingfacts.org/wp-content/themes/amazing-facts-theme/dist/svg/amazing-facts-logo.svg" 
-                         onload="decision['swedish'] = primary['swedish']" 
-                         onerror="decision['swedish'] = alternate['swedish']" 
-                         hidden/>
                     <br />
                     Swedish / Svenska
                 </button>
             </div>
             <div id="icelandic" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['icelandic']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('icelandic')">
                     <img src="countries/iceland.webp" class="flag-icon" />
                     <br />
                     Icelandic / Íslenska
                 </button>
             </div>
             <div id="finish" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['finish']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('finish')">
                     <img src="countries/finland.webp" class="flag-icon" />
                     <br />
                     Finnish / Suomi
                 </button>
             </div>
             <div id="bulgarian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['bulgarian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('bulgarian')">
                     <img src="countries/bulgaria.webp" class="flag-icon" />
                     <br />
                     Bulgarian / Български
                 </button>
             </div>
             <div id="bengali" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['bengali']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('bengali')">
                     <img src="countries/bangladesh.webp" class="flag-icon" />
                     <br />
                     Bengali / বাংলা
                 </button>
             </div>
             <div id="bhojpuri" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['bhojpuri']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('bhojpuri')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Bhojpuri / भोजपुरी
                 </button>
             </div>
             <div id="dayak" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['dayak']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('dayak')">
                     <img src="countries/indonesia.png" class="flag-icon" />
                     <br />
                     Dayak / Dayak
                 </button>
             </div>
             <div id="estonian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['estonian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('estonian')">
                     <img src="countries/estonia.webp" class="flag-icon" />
                     <br />
                     Estonian / Eesti
                 </button>
             </div>
             <div id="javanese" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['javanese']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('javanese')">
                     <img src="countries/indonesia.png" class="flag-icon" />
                     <br />
                     Javanese / ꦧꦱꦗꦮ
                 </button>
             </div>
             <div id="kannada" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['kannada']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('kannada')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Kannada / ಕನ್ನಡ
                 </button>
             </div>
             <div id="malagasy" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['malagasy']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('malagasy')">
                     <img src="countries/madagascar.webp" class="flag-icon" />
                     <br />
                     Malagasy / Malagasy
                 </button>
             </div>
             <div id="malayalam" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['malayalam']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('malayalam')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Malayalam / മലയാളം
                 </button>
             </div>
             <div id="marathi" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['marathi']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('marathi')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Marathi / मराठी
                 </button>
             </div>
             <div id="marathi" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['marathi']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('marathi')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Marathi / मराठी
                 </button>
             </div>
             <div id="meitei" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['meitei']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('meitei')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Meitei / ꯃꯩꯇꯩ
                 </button>
             </div>
             <div id="mizo" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['mizo']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('mizo')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Mizo / Mizo
                 </button>
             </div>
             <div id="mongolian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['mongolian']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('mongolian')">
                     <img src="countries/mongolia.webp" class="flag-icon" />
                     <br />
                     Mongolian / Монгол
                 </button>
             </div>
             <div id="nepali" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['nepali']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('nepali')">
                     <img src="countries/nepal.webp" class="flag-icon" />
                     <br />
                     Nepali / नेपाली
                 </button>
             </div>
             <div id="punjabi" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['punjabi']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('punjabi')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Punjabi / ਪੰਜਾਬੀ
                 </button>
             </div>
             <div id="santali" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['santali']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('santali')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Santali / ᱥᱟᱱᱛᱟᱲᱤ
                 </button>
             </div>
             <div id="tamil" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['tamil']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('tamil')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Tamil / தமிழ்
                 </button>
             </div>
             <div id="telugu" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=primary['telugu']">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('telugu')">
                     <img src="countries/india.png" class="flag-icon" />
                     <br />
                     Telugu / తెలుగు
+                </button>
+            </div>
+            <div id="abkhazian" class="flex-item">
+                <button class="button-stand-alone language-selection" onclick="location.href=redirect('abkhazian')">
+                    <img src="countries/abkhazia.webp" class="flag-icon" />
+                    <br />
+                    Abkhazian / аҧсуа
                 </button>
             </div>
         </div>

@@ -15,36 +15,90 @@ function toggleMenu()
     }
 }
 
-async function redirect(primary:string, backup:string)
+function redirect(language:string)
 {
-    const response = await fetch(primary)
-    if (response.ok) 
+    if (availability[primaryKey[language]])
     {
-        location.href = primary
+        return primary[language]
     }
-    else if (backup.length > 0)
+    else if (alternate[language])
     {
-        location.href = backup
+        return alternate[language]
     }
     else
     {
-        if (backup === "https://hopetv.org")
-        {
-            location.href = "https://www.glowonline.org/digital/english"
-        }
-        else
-        {
-            redirect(
-                "https://www.glowonline.org/digital/english",
-                "https://hopetv.org")
-        }
+        return primary["english"]
     }
 }
 
-var decision = {
+var availability: {[id: string]: boolean} = {
+    "glow":    false,
+    "hope":    false,
+    "amazing": false,
+    "egw":     false,
+    "youtube": true,
 }
 
-var primary = {
+var primaryKey: {[id: string]: string} = {
+    "english":      "glow",
+    "spanish":      "glow",
+    "portuguese":   "amazing",
+    "french":       "amazing",
+    "german":       "hope",
+    "russian":      "amazing",
+    "romanian":     "glow",
+    "ukrainian":    "hope",
+    "tagalog":      "glow",
+    "cebuano":      "hope",
+    "hindi":        "hope",
+    "arabic":       "amazing",
+    "nederlands":   "glow",
+    "czech":        "glow",
+    "hungarian":    "glow",
+    "indonesian":   "hope",
+    "amharic":      "glow",
+    "slovenia":     "glow",
+    "armenian":     "glow",
+    "norwegian":    "glow",
+    "polski":       "glow",
+    "italian":      "hope",
+    "slovak":       "glow",
+    "visayan":      "glow",
+    "japanese":     "hope",
+    "chinese":      "glow",
+    "korean":       "hope",
+    "swedish":      "amazing",
+    "icelandic":    "hope",
+    "finnish":      "hope",
+    "bulgarian":    "hope",
+    "bengali":      "youtube",
+    "bhojpuri":     "youtube",
+    "dayak":        "youtube",
+    "estonian":     "youtube",
+    "javanese":     "youtube",
+    "kannada":      "youtube",
+    "malagasy":     "youtube",
+    "malayalam":    "youtube",
+    "marathi":      "youtube",
+    "meitei":       "youtube",
+    "mizo":         "youtube",
+    "mongolian":    "youtube",
+    "nepali":       "youtube",
+    "punjabi":      "youtube",
+    "santali":      "youtube",
+    "tamil":        "youtube",
+    "telugu":       "youtube",
+    "abkhazian":    "egw",
+    "afrikaans":    "egw",
+    "akawaio":      "egw",
+    "albanian":     "egw",
+    "altay":        "egw",
+    "assamese":     "egw",
+    "avar":         "egw",
+    "Azerbaijani":  "egw",
+}
+
+var primary: {[id: string]: string} = {
     "english":      "https://www.glowonline.org/digital/english",
     "spanish":      "https://www.glowonline.org/digital/espanol",
     "portuguese":   "https://www.amazingfacts.org/pt/inicio",
@@ -93,9 +147,17 @@ var primary = {
     "santali":      "https://www.youtube.com/playlist?list=PLancRlPt_m7dU7XssCvv6N6FtYWnCMgAY",
     "tamil":        "https://www.youtube.com/playlist?list=PLT_TN2KLM48FtF3rsMUM17sLu4Q-eVu7F",
     "telugu":       "https://www.youtube.com/playlist?list=PL4yGTeBkSwpQFKxOYsw0Vx7PzS53Yv6FH",
+    "abkhazian":    "https://egwwritings.org/read?panels=p13987.2&index=0",
+    "afrikaans":    "https://egwwritings.org/read?panels=p11589.2&index=0",
+    "akawaio":      "https://egwwritings.org/read?panels=p12275.2&index=0",
+    "albanian":     "https://egwwritings.org/read?panels=p14649.2&index=0",
+    "altay":        "https://egwwritings.org/read?panels=p12111.2&index=0",
+    "assamese":     "https://egwwritings.org/read?panels=p14104.3&index=0",
+    "avar":         "https://egwwritings.org/read?panels=p13992.2&index=0",
+    "Azerbaijani":  "https://egwwritings.org/read?panels=p13958.2&index=0",
 }
 
-var alternate = {
+var alternate: {[id:string]: string} = {
     "english":      "https://hopetv.org",
     "spanish":      "https://www.amazingfacts.org/es/inicio/",
     "portuguese":   "https://www.novotempo.com/",
@@ -112,9 +174,9 @@ var alternate = {
     "czech":        "http://www.hopetv.cz",
     "hungarian":    "https://remenytv.hu",
     "indonesian":   "https://www.glowonline.org/glow-indonesian",
-    "amharic":      "",
+    "amharic":      "https://egwwritings.org/read?panels=p14077.2&index=0",
     "slovenia":     "",
-    "armenian":     "",
+    "armenian":     "https://egwwritings.org/read?panels=p11414.89&index=0",
     "norwegian":    "https://hopechannel.no",
     "polski":       "https://hopechannel.pl",
     "italian":      "https://www.amazingfacts.org/it/casa",
@@ -144,148 +206,4 @@ var alternate = {
     "santali":      "",
     "tamil":        "",
     "telugu":       "",
-}
-
-function countryClick(countryName:string) 
-{
-    switch (countryName) 
-    {
-        case "english":
-            redirect(
-                "https://www.glowonline.org/digital/english",
-                "https://hopetv.org")
-            break;
-        case "spanish":
-            redirect(
-                "https://www.glowonline.org/digital/espanol",
-                "https://www.amazingfacts.org/es/inicio/")
-            break;
-        case "portuguese":
-            redirect(
-                "https://www.amazingfacts.org/pt/inicio",
-                "https://www.novotempo.com/")
-            break;
-        case "french":
-            redirect(
-                "https://www.amazingfacts.org/fr/accueil/",
-                "https://hcf.tv")
-            break;
-        case "german":
-            redirect(
-                "https://hopetv.de",
-                "https://www.amazingfacts.org/de/startseite")
-            break;
-        case "russian":
-            redirect(
-                "https://www.amazingfacts.org/ru/%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%b0%d1%8f/",
-                "https://hopetv.ru/")
-            break;
-        case "romanian":
-            redirect(
-                "https://www.glowonline.org/glow-roman/",
-                "https://www.sperantatv.ro/")
-            break;
-        case "ukrainian":
-            redirect(
-                "https://tv.hope.ua",
-                "https://www.glowonline.org/gyd/ukrainian")
-            break;
-        case "tagalog":
-            redirect(
-                "https://www.glowonline.org/gyd/tagalog/",
-                "https://hopetv.ph/")
-            break;
-        case "cebuano":
-            redirect(
-                "https://hopetv.ph/",
-                "")
-            break;
-        case "hindi":
-            redirect(
-                "https://hopechannelhindi.in/",
-                "")
-            break;
-        case "arabic":
-            redirect(
-                "https://www.amazingfacts.org/ar/%d8%b9%d9%85%d9%84-%d8%a7%d9%84%d8%b1%d8%a7%d8%a6%d9%84",
-                "https://www.amazingfacts.org/ar/%d8%a7%d9%84%d8%b5%d9%81%d8%ad%d8%a9-%d8%a7%d9%84%d8%b1%d8%a6%d9%8a%d8%b3%d9%8a%d8%a9")
-            break;
-        case "nederlands":
-            redirect(
-                "https://www.glowonline.org/glow-dutch",
-                "https://hopechannel.dk")
-            break;
-        case "czech":
-            redirect(
-                "https://www.glowonline.org/czech",
-                "http://www.hopetv.cz")
-            break;
-        case "hungarian":
-            redirect(
-                "https://www.glowonline.org/hungary",
-                "https://remenytv.hu")
-            break;
-        case "indonesian":
-            redirect(
-                "https://hopechannel.id",
-                "https://www.glowonline.org/glow-indonesian")
-            break;
-        case "amharic":
-            redirect(
-                "https://www.glowonline.org/digital/amharic/",
-                "")
-            break;
-        case "slovenia":
-            redirect(
-                "https://www.glowonline.org/glow-slovenski",
-                "")
-            break;
-        case "armenian":
-            redirect(
-                "https://www.glowonline.org/glow-armenian/",
-                "")
-            break;
-        case "norwegian":
-            redirect(
-                "https://www.glowonline.org/glow-norwegian/",
-                "https://hopechannel.no")
-            break;
-        case "polski":
-            redirect(
-                "https://www.glowonline.org/pl",
-                "https://hopechannel.pl")
-            break;
-        case "italian":
-            redirect(
-                "https://hopemedia.it",
-                "https://www.amazingfacts.org/it/casa")
-            break;
-        case "slovak":
-            redirect(
-                "https://www.glowonline.org/glow-slovak",
-                "")
-            break;
-        case "visayan":
-            redirect(
-                "https://www.glowonline.org/glow-visayan",
-                "https://hopetv.ph")
-            break;
-        case "japanese":
-            redirect(
-                "https://www.hopechannel.jp",
-                "https://www.amazingfacts.org/ja/%e3%83%9b%e3%83%bc%e3%83%a0")
-            break;
-        case "chinese":
-            redirect(
-                "https://www.glowonline.org/glow-chinese/",
-                "https://www.chinesehope.tv")
-            break;
-        case "korean":
-            redirect(
-                "https://hopechannel.kr",
-                "https://www.amazingfacts.org/ko/%ed%99%88")
-            break;
-        default:
-            break;
-    }
 }
