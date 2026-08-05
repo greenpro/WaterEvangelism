@@ -135,6 +135,17 @@ button {
     text-align: center;
 }
 
+.section-footer {
+    background-color: #FFFFFF;
+    border-width: 4px 0px 0px 0px;
+    border-radius: 26px;
+    border-style: solid;
+    border-color: #000000;
+    margin: 30px -30px -30px -30px;
+    padding: 20px;
+    font-size: 12pt;
+}
+
 #waterPickup, tr, td {
     border-style: solid;
     border-collapse: collapse;
