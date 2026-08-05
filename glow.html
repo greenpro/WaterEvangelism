@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Water Evangelism</title>
+        <title>Language Selection</title>
         <link rel="icon" type="image/x-icon" href="waterbottle.png">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -114,9 +114,9 @@
              onerror="availability['egw'] = false" 
              hidden/>
 
-        <!--countries-->
-        <div class="flex-container">
-            <div id="english" class="flex-item">
+        <div id="contenents">
+        </div>
+        <!--    <div id="english" class="flex-item">
                 <button class="button-stand-alone language-selection" onclick="location.href=redirect('english')">
                     <img src="countries/us.png" class="flag-icon" />
                     <br />
@@ -130,13 +130,6 @@
                     Spanish / Español
                 </button>
             </div>
-            <div id="portuguese" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('portuguese')">
-                    <img src="countries/brazil.png" class="flag-icon" />
-                    <br />
-                    Portuguese / Português
-                </button>
-            </div>
             <div id="french" class="flex-item">
                 <button class="button-stand-alone language-selection" onclick="location.href=redirect('french')">
                     <img src="countries/france.png" class="flag-icon" />
@@ -144,236 +137,261 @@
                     French / Français
                 </button>
             </div>
-            <div id="german" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('german')">
-                    <img src="countries/germany.png" class="flag-icon" />
-                    <br />
-                    German / Deutsch
-                </button>
+            <div id="north-america">
+
             </div>
-            <div id="russian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('russian')">
-                    <img src="countries/russia.png" class="flag-icon" />
-                    <br />
-                    Russian / Русский
-                </button>
+            <div id="south-america">
+
             </div>
-            <div id="romanian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('romanian')">
-                    <img src="countries/romania.png" class="flag-icon" />
-                    <br />
-                    Romanian / Română
-                </button>
+            <div id="europe">
+                <div id="portuguese" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('portuguese')">
+                        <img src="countries/brazil.png" class="flag-icon" />
+                        <br />
+                        Portuguese / Português
+                    </button>
+                </div>
+                <div id="german" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('german')">
+                        <img src="countries/germany.png" class="flag-icon" />
+                        <br />
+                        German / Deutsch
+                    </button>
+                </div>
+                <div id="russian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('russian')">
+                        <img src="countries/russia.png" class="flag-icon" />
+                        <br />
+                        Russian / Русский
+                    </button>
+                </div>
+                <div id="romanian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('romanian')">
+                        <img src="countries/romania.png" class="flag-icon" />
+                        <br />
+                        Romanian / Română
+                    </button>
+                </div>
+                <div id="ukrainian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('ukrainian')">
+                        <img src="countries/ukraine.png" class="flag-icon" />
+                        <br />
+                        Ukrainian / Українська
+                    </button>
+                </div>
+                <div id="nederlands" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('nederlands')">
+                        <img src="countries/netherlands.png" class="flag-icon" />
+                        <br />
+                        Nederlands / Dutch
+                    </button>
+                </div>
+                <div id="czech" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('czech')">
+                        <img src="countries/czech.png" class="flag-icon" />
+                        <br />
+                        Czech / Čeština
+                    </button>
+                </div>
+                <div id="hungarian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('hungarian')">
+                        <img src="countries/hungary.png" class="flag-icon" />
+                        <br />
+                        Hungarian / Magyar
+                    </button>
+                </div>
+                <div id="icelandic" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('icelandic')">
+                        <img src="countries/iceland.webp" class="flag-icon" />
+                        <br />
+                        Icelandic / Íslenska
+                    </button>
+                </div>
+                <div id="norwegian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('norwegian')">
+                        <img src="countries/norway.png" class="flag-icon" />
+                        <br />
+                        Norwegian / Norsk
+                    </button>
+                </div>
+                <div id="polski" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('polski')">
+                        <img src="countries/poland.png" class="flag-icon" />
+                        <br />
+                        Polski / Polish
+                    </button>
+                </div>
+                <div id="italian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('italian')">
+                        <img src="countries/italy.png" class="flag-icon" />
+                        <br />
+                        Italian / Italiano
+                    </button>
+                </div>
+                <div id="slovak" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('slovak')">
+                        <img src="countries/slovakia.png" class="flag-icon" />
+                        <br />
+                        Slovak / Slovenčina
+                    </button>
+                </div>
+                <div id="estonian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('estonian')">
+                        <img src="countries/estonia.webp" class="flag-icon" />
+                        <br />
+                        Estonian / Eesti
+                    </button>
+                </div>
+                <div id="swedish" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('swedish')">
+                        <img src="countries/sweden.webp" class="flag-icon" />
+                        <br />
+                        Swedish / Svenska
+                    </button>
+                </div>
+                <div id="slovenia" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('slovenia')">
+                        <img src="countries/slovenia.png" class="flag-icon" />
+                        <br />
+                        Slovenia / Slovenščina
+                    </button>
+                </div>
+                <div id="armenian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('armenian')">
+                        <img src="countries/armenia.png" class="flag-icon" />
+                        <br />
+                        Armenian / Հայերեն
+                    </button>
+                </div>
+                <div id="finish" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('finish')">
+                        <img src="countries/finland.webp" class="flag-icon" />
+                        <br />
+                        Finnish / Suomi
+                    </button>
+                </div>
+                <div id="bulgarian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('bulgarian')">
+                        <img src="countries/bulgaria.webp" class="flag-icon" />
+                        <br />
+                        Bulgarian / Български
+                    </button>
+                </div>
             </div>
-            <div id="ukrainian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('ukrainian')">
-                    <img src="countries/ukraine.png" class="flag-icon" />
-                    <br />
-                    Ukrainian / Українська
-                </button>
+            <div id="middle-east">
+                <div id="arabic" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('arabic')">
+                        <img src="countries/saudiArabia.png" class="flag-icon" />
+                        <br />
+                        Arabic / العربية
+                    </button>
+                </div>
             </div>
-            <div id="tagalog" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('tagalog')">
-                    <img src="countries/philippines.png" class="flag-icon" />
-                    <br />
-                    Tagalog / Tagalog
-                </button>   
+            <div id="asia">
+                <div id="hindi" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('hindi')">
+                        <img src="countries/india.png" class="flag-icon" />
+                        <br />
+                        Hindi / हिंदी
+                    </button>
+                </div>
+                <div id="japanese" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('japanese')">
+                        <img src="countries/japan.png" class="flag-icon" />
+                        <br />
+                        Japanese / 日本語
+                    </button>
+                </div>
+                <div id="chinese" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('chinese')">
+                        <img src="countries/china.png" class="flag-icon" />
+                        <br />
+                        Chinese / 中文
+                    </button>
+                </div>
+                <div id="korean" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('korean')">
+                        <img src="countries/southKorea.png" class="flag-icon" />
+                        <br />
+                        Korean / 한국어
+                    </button>
+                </div>
+                <div id="tagalog" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('tagalog')">
+                        <img src="countries/philippines.png" class="flag-icon" />
+                        <br />
+                        Tagalog / Tagalog
+                    </button>   
+                </div>
+                <div id ="cebuano" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('cebuano')">
+                        <img src="countries/philippines.png" class="flag-icon" />
+                        <br />
+                        Cebuano / Cebuano
+                    </button>
+                </div>
+                <div id="visayan" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('visayan')">
+                        <img src="countries/philippines.png" class="flag-icon" />
+                        <br />
+                        Visayan / Binisaya
+                    </button>
+                </div>
+                <div id="bengali" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('bengali')">
+                        <img src="countries/bangladesh.webp" class="flag-icon" />
+                        <br />
+                        Bengali / বাংলা
+                    </button>
+                </div>
+                <div id="bhojpuri" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('bhojpuri')">
+                        <img src="countries/india.png" class="flag-icon" />
+                        <br />
+                        Bhojpuri / भोजपुरी
+                    </button>
+                </div>
+                <div id="kannada" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('kannada')">
+                        <img src="countries/india.png" class="flag-icon" />
+                        <br />
+                        Kannada / ಕನ್ನಡ
+                    </button>
+                </div>
             </div>
-            <div id ="cebuano" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('cebuano')">
-                    <img src="countries/philippines.png" class="flag-icon" />
-                    <br />
-                    Cebuano / Cebuano
-                </button>
+            <div id="africa">
+                <div id="amharic" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('amharic')">
+                        <img src="countries/ethiopia.png" class="flag-icon" />
+                        <br />
+                        Amharic / አማርኛ
+                    </button>
+                </div>
             </div>
-            <div id="hindi" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('hindi')">
-                    <img src="countries/india.png" class="flag-icon" />
-                    <br />
-                    Hindi / हिंदी
-                </button>
+            <div id="oceania">
+                <div id="indonesian" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('indonesian')">
+                        <img src="countries/indonesia.png" class="flag-icon" />
+                        <br />
+                        Indonesian / Bahasa Indonesia
+                    </button>
+                </div>
+                <div id="dayak" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('dayak')">
+                        <img src="countries/indonesia.png" class="flag-icon" />
+                        <br />
+                        Dayak / Dayak
+                    </button>
+                </div>
+                <div id="javanese" class="flex-item">
+                    <button class="button-stand-alone language-selection" onclick="location.href=redirect('javanese')">
+                        <img src="countries/indonesia.png" class="flag-icon" />
+                        <br />
+                        Javanese / ꦧꦱꦗꦮ
+                    </button>
+                </div>
             </div>
-            <div id="arabic" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('arabic')">
-                    <img src="countries/saudiArabia.png" class="flag-icon" />
-                    <br />
-                    Arabic / العربية
-                </button>
-            </div>
-            <div id="nederlands" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('nederlands')">
-                    <img src="countries/netherlands.png" class="flag-icon" />
-                    <br />
-                    Nederlands / Dutch
-                </button>
-            </div>
-            <div id="czech" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('czech')">
-                    <img src="countries/czech.png" class="flag-icon" />
-                    <br />
-                    Czech / Čeština
-                </button>
-            </div>
-            <div id="hungarian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('hungarian')">
-                    <img src="countries/hungary.png" class="flag-icon" />
-                    <br />
-                    Hungarian / Magyar
-                </button>
-            </div>
-            <div id="indonesian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('indonesian')">
-                    <img src="countries/indonesia.png" class="flag-icon" />
-                    <br />
-                    Indonesian / Bahasa Indonesia
-                </button>
-            </div>
-            <div id="amharic" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('amharic')">
-                    <img src="countries/ethiopia.png" class="flag-icon" />
-                    <br />
-                    Amharic / አማርኛ
-                </button>
-            </div>
-            <div id="slovenia" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('slovenia')">
-                    <img src="countries/slovenia.png" class="flag-icon" />
-                    <br />
-                    Slovenia / Slovenščina
-                </button>
-            </div>
-            <div id="armenian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('armenian')">
-                    <img src="countries/armenia.png" class="flag-icon" />
-                    Armenian / Հայերեն
-                </button>
-            </div>
-            <div id="norwegian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('norwegian')">
-                    <img src="countries/norway.png" class="flag-icon" />
-                    <br />
-                    Norwegian / Norsk
-                </button>
-            </div>
-            <div id="polski" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('polski')">
-                    <img src="countries/poland.png" class="flag-icon" />
-                    <br />
-                    Polski / Polish
-                </button>
-            </div>
-            <div id="italian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('italian')">
-                    <img src="countries/italy.png" class="flag-icon" />
-                    <br />
-                    Italian / Italiano
-                </button>
-            </div>
-            <div id="slovak" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('slovak')">
-                    <img src="countries/slovakia.png" class="flag-icon" />
-                    <br />
-                    Slovak / Slovenčina
-                </button>
-            </div>
-            <div id="visayan" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('visayan')">
-                    <img src="countries/philippines.png" class="flag-icon" />
-                    <br />
-                    Visayan / Binisaya
-                </button>
-            </div>
-            <div id="japanese" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('japanese')">
-                    <img src="countries/japan.png" class="flag-icon" />
-                    <br />
-                    Japanese / 日本語
-                </button>
-            </div>
-            <div id="chinese" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('chinese')">
-                    <img src="countries/china.png" class="flag-icon" />
-                    <br />
-                    Chinese / 中文
-                </button>
-            </div>
-            <div id="korean" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('korean')">
-                    <img src="countries/southKorea.png" class="flag-icon" />
-                    <br />
-                    Korean / 한국어
-                </button>
-            </div>
-            <div id="swedish" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('swedish')">
-                    <img src="countries/sweden.webp" class="flag-icon" />
-                    <br />
-                    Swedish / Svenska
-                </button>
-            </div>
-            <div id="icelandic" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('icelandic')">
-                    <img src="countries/iceland.webp" class="flag-icon" />
-                    <br />
-                    Icelandic / Íslenska
-                </button>
-            </div>
-            <div id="finish" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('finish')">
-                    <img src="countries/finland.webp" class="flag-icon" />
-                    <br />
-                    Finnish / Suomi
-                </button>
-            </div>
-            <div id="bulgarian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('bulgarian')">
-                    <img src="countries/bulgaria.webp" class="flag-icon" />
-                    <br />
-                    Bulgarian / Български
-                </button>
-            </div>
-            <div id="bengali" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('bengali')">
-                    <img src="countries/bangladesh.webp" class="flag-icon" />
-                    <br />
-                    Bengali / বাংলা
-                </button>
-            </div>
-            <div id="bhojpuri" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('bhojpuri')">
-                    <img src="countries/india.png" class="flag-icon" />
-                    <br />
-                    Bhojpuri / भोजपुरी
-                </button>
-            </div>
-            <div id="dayak" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('dayak')">
-                    <img src="countries/indonesia.png" class="flag-icon" />
-                    <br />
-                    Dayak / Dayak
-                </button>
-            </div>
-            <div id="estonian" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('estonian')">
-                    <img src="countries/estonia.webp" class="flag-icon" />
-                    <br />
-                    Estonian / Eesti
-                </button>
-            </div>
-            <div id="javanese" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('javanese')">
-                    <img src="countries/indonesia.png" class="flag-icon" />
-                    <br />
-                    Javanese / ꦧꦱꦗꦮ
-                </button>
-            </div>
-            <div id="kannada" class="flex-item">
-                <button class="button-stand-alone language-selection" onclick="location.href=redirect('kannada')">
-                    <img src="countries/india.png" class="flag-icon" />
-                    <br />
-                    Kannada / ಕನ್ನಡ
-                </button>
-            </div>
+
             <div id="malagasy" class="flex-item">
                 <button class="button-stand-alone language-selection" onclick="location.href=redirect('malagasy')">
                     <img src="countries/madagascar.webp" class="flag-icon" />
@@ -466,7 +484,7 @@
                 </button>
             </div>
         </div>
-        <br />
+        <br />-->
     </body>
     <footer>
         <hr />

@@ -135,10 +135,6 @@ button {
     text-align: center;
 }
 
-.clean-zones {
-    width: 100%;
-}
-
 #waterPickup, tr, td {
     border-style: solid;
     border-collapse: collapse;
@@ -163,6 +159,15 @@ ul > li {
 .flag-icon {
     max-width: 300px;
     max-height: 200px;
+}
+
+.event-icon {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.event {
+    width: 325px;
 }
 
 .flex-container {
