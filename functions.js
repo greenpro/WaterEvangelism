@@ -49,22 +49,32 @@ function updateItemNumber(elementId, total) {
         }
     });
 }
+function distributionPopulate() {
+    var container = document.getElementById("events");
+    if (container == null) {
+        return;
+    }
+    for (let distributionKey in distributions) {
+        container.innerHTML += "<div class='flex-item section event'>\
+                                    <div class='section-title'>\
+                                        <img src='" + distributions[distributionKey].icon + "' class='event-icon'>\
+                                        <br />" +
+            distributions[distributionKey].name +
+            "</div>\
+                                    Number of bottles: <span id='" + distributionKey + "-bottles'>0</span><br />\
+                                    Total scans: <span id='" + distributionKey + "-total'>0</span><br />\
+                                    Unique scans: <span id='" + distributionKey + "-unique'>0</span><br />\
+                                    languages: <span id='" + distributionKey + "-languages'>0</span><br />\
+                                </div>";
+    }
+}
 function updateNumbers() {
     return __awaiter(this, void 0, void 0, function* () {
-        var sections = [
-            [{ text: "soccer-bottles", total: 10000 },
-                { text: "soccer-total", total: 407 },
-                { text: "soccer-unique", total: 304 },
-                { text: "soccer-languages", total: 5 }],
-            [{ text: "fair-bottles", total: 1920 },
-                { text: "fair-total", total: 62 },
-                { text: "fair-unique", total: 48 },
-                { text: "fair-languages", total: 2 }],
-        ];
-        for (var section of sections) {
-            for (var element of section) {
-                updateItemNumber(element.text, element.total);
-            }
+        for (let distributionKey in distributions) {
+            updateItemNumber(distributionKey + "-bottles", distributions[distributionKey].bottles);
+            updateItemNumber(distributionKey + "-total", distributions[distributionKey].total);
+            updateItemNumber(distributionKey + "-unique", distributions[distributionKey].unique);
+            updateItemNumber(distributionKey + "-languages", distributions[distributionKey].languages);
         }
     });
 }
@@ -152,11 +162,30 @@ function runPopulate() {
             browserLanguagePopulate();
         }
         if (document.title === "Water Evangelism") {
+            distributionPopulate();
             updateNumbers();
         }
     });
 }
 runPopulate();
+var distributions = {
+    "fair": {
+        name: "Johnson County Fair 2026",
+        icon: "events/fair.jpg",
+        bottles: 1921,
+        total: 70,
+        unique: 52,
+        languages: 2,
+    },
+    "soccer": {
+        name: "Soccer Tournament 2026",
+        icon: "events/soccer.bmp",
+        bottles: 10000,
+        total: 407,
+        unique: 304,
+        languages: 5
+    },
+};
 var languages = {
     "common": {
         name: "Suggested",
