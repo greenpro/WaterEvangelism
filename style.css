@@ -194,3 +194,11 @@ ul > li {
     height: 375px;
     width: 375px;
 }
+
+.fa-caret-down {
+    padding-left: 20px;
+}
+
+.fa-caret-up {
+    padding-left: 20px;
+}

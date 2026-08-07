@@ -80,8 +80,19 @@ function updateNumbers() {
 }
 function toggleContenent(key) {
     var langs = document.getElementById(key);
-    if (langs != null) {
-        langs.hidden = !(langs.hidden);
+    var caret = document.getElementById(key + "-caret");
+    console.log(key);
+    console.log(langs);
+    console.log(caret);
+    if (langs != null && caret != null) {
+        if (langs.style.display == "flex") {
+            langs.style.display = "none";
+            caret.classList = "fa fa-caret-up";
+        }
+        else {
+            langs.style.display = "flex";
+            caret.classList = "fa fa-caret-down";
+        }
     }
 }
 function languagePopulate() {
@@ -93,13 +104,19 @@ function languagePopulate() {
         }
         for (let contenentKey in languages) {
             var contenent = languages[contenentKey];
+            var display = "none";
+            var direction = "up";
+            if (contenentKey == "common") {
+                display = "flex";
+                direction = "down";
+            }
             container.innerHTML += "<div class='section'>" +
                 "<div class='section-title' onclick='toggleContenent(\"" + contenentKey + "\")'>" +
-                contenent.name +
+                contenent.name + "<i id='" + contenentKey + "-caret' class='fa fa-caret-" + direction + "' aria-hidden='true'></i>" +
                 "</div>" +
-                "<div id='" + contenentKey + "' class='flex-container'>";
-            "</div>";
-            "</div>";
+                "<div id='" + contenentKey + "' class='flex-container' style='display:" + display + "'>" +
+                "</div>" +
+                "</div>";
             var contenentDiv = document.getElementById(contenentKey);
             if (!contenentDiv) {
                 console.log("cannot find contenent div");

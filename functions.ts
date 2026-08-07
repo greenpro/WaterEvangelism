@@ -95,9 +95,22 @@ async function updateNumbers()
 function toggleContenent(key: string)
 {
     var langs = document.getElementById(key)
-    if (langs != null)
+    var caret = document.getElementById(key + "-caret")
+    console.log(key)
+    console.log(langs)
+    console.log(caret)
+    if (langs != null && caret != null)
     {
-        langs.hidden = !(langs.hidden)
+        if (langs.style.display == "flex")
+        {
+            langs.style.display = "none"
+            caret.classList = "fa fa-caret-up"
+        }
+        else
+        {
+            langs.style.display = "flex"
+            caret.classList = "fa fa-caret-down"
+        }
     }
 }
 
@@ -114,12 +127,19 @@ async function languagePopulate()
     {
         var contenent = languages[contenentKey]
 
+        var display = "none"
+        var direction = "up"
+        if (contenentKey == "common")
+        {
+            display = "flex"
+            direction = "down"
+        }
         container.innerHTML += "<div class='section'>" +
                               "<div class='section-title' onclick='toggleContenent(\"" + contenentKey + "\")'>" +
-                              contenent.name +
+                              contenent.name + "<i id='" + contenentKey + "-caret' class='fa fa-caret-" + direction + "' aria-hidden='true'></i>" +
                               "</div>" +
-                              "<div id='" + contenentKey + "' class='flex-container'>"
-                              "</div>"
+                              "<div id='" + contenentKey + "' class='flex-container' style='display:" + display + "'>" +
+                              "</div>" +
                               "</div>"
         
         var contenentDiv = document.getElementById(contenentKey)
