@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "My build task",
+            "type": "shell",
+            // Assign output file name with VSCode inner variables like ${fileBasename}
+            "command": "/home/craig/WaterEvangelism/node_modules/.bin/tsc -p /home/craig/WaterEvangelism/tsconfig.json; lessc src/style.less style.css",
+            "options": {
+            },
+            "problemMatcher": ["tsc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,191 @@
+@color_mainBg:             #2D92B8;
+@color_titleBg:            #40DFAF;
+@color_mottoBg:            #FFDE95;
+@color_border:             #000000;
+@color_links:              #000000;
+@color_buttonInactiveBg:   #FFB777;
+@color_buttonInactiveText: #888888; 
+@color_buttonBg:           #F88747;
+@color_buttonText:         #000000;
+@color_sectionBg:          #9ADFF8;
+@color_sectionTitle:       #FFFFFF;
+@color_sectionFooter:      #FFFFFF;
+@color_footer:             #FFFFFF;
+
+@border_width: 4px;
+@border_width_title: 0px 0px @border_width 0px;
+@border_width_footer: @border_width 0px 0px 0px;
+
+html {
+    font-family: "Saira", sans-serif;
+    background-color: @color_mainBg;
+}
+
+#title {
+    text-align: center;
+    border-width: @border_width;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: @color_border;
+    background-color: @color_mottoBg;
+    margin: 10px 10%;
+    width: 80%;
+    padding: 0px;
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+#main-title {
+    background-color: @color_titleBg;
+    border-width: @border_width_title;
+    border-radius: 26px;
+    border-style: solid;
+    border-color: @color_border;
+    margin: 0px;
+    padding: 20px;
+}
+
+#menu {
+    width: 30%;
+    display: none;
+    position: absolute;
+    left: 45px;
+    top: 10px;
+}
+#menu-div {
+    position: relative;
+    margin-left: 3%;
+}
+#menu-icon {
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+#menu-off {
+    width: 100%;
+    display: none;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+a:active
+a:visited 
+a:hover
+a:link {
+    color: @color_links;
+}
+
+button {
+    width: 100%;
+    height: line;
+    margin: 0px;
+    font-size: 18pt;
+    border-width: 0px @border_width @border_width @border_width;
+    background-color: @color_buttonBg;
+    border-color: @color_border;
+    color: @color_buttonText;
+    padding: 9pt;
+    text-align: left;
+}
+.button-top {
+    border-radius: 30px 30px 0px 0px;
+    border-width: @border_width;
+}
+.button-bottom {
+    border-radius: 0px 0px 30px 30px;
+}
+.button-stand-alone {
+    border-width: @border_width;
+    border-radius: 15px;
+    width: fit-content;
+    margin-left: 3%;
+}
+.button-inactive {
+    color: @color_buttonInactiveText;
+    background-color: @color_buttonInactiveBg;
+}
+.button-tabbed {
+    padding-left: 27pt;
+}
+
+.section {
+    background-color: @color_sectionBg;
+    border-color: @color_border;
+    border-style: solid;
+    border-width: @border_width;
+    border-radius: 30px;
+    padding: 30px;
+    margin: 0px 3% 40px 3%;
+    font-size: 20pt;
+    align-items: center;
+
+    .section-title {
+        background-color: @color_sectionTitle;
+        border-width: @border_width_title;
+        border-radius: 26px;
+        border-style: solid;
+        border-color: @color_border;
+        margin: -30px -30px 30px -30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .section-footer {
+        background-color: @color_sectionFooter;
+        border-width: @border_width_footer;
+        border-radius: 26px;
+        border-style: solid;
+        border-color: @color_border;
+        margin: 30px -30px -30px -30px;
+        padding: 20px;
+        font-size: 12pt;
+    }
+}
+
+footer {
+    color: @color_footer;
+    margin-top: 45px;
+    width: 100%; 
+}
+
+ul > li {
+    list-style-image: url("waterbottle.png");
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.flag-icon {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.event {
+    width: 325px;
+
+    .event-icon {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-selection {
+    margin: 10px;
+    text-align: center;
+    height: 375px;
+    width: 375px;
+}
+
+.fa-caret-down {
+    padding-left: 20px;
+}
+
+.fa-caret-up {
+    padding-left: 20px;
+}
