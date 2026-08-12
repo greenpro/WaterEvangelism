@@ -15,6 +15,18 @@
             }
         },
         {
+            "label": "minify",
+            "type": "shell",
+            "command": "uglifyjs js/functions.js -o js/functions.js -m --no-annotations",
+            "options": {
+            },
+            "problemMatcher": ["$uglifyjs"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
             "label": "Build Less",
             "type": "shell",
             // Assign output file name with VSCode inner variables like ${fileBasename}
@@ -29,7 +41,7 @@
         },
         {
             "label": "Build All",
-            "dependsOn": ["Build Typescript", "Build Less"],
+            "dependsOn": ["Build Typescript", "minify", "Build Less"],
             "group": {
                 "kind": "build",
                 "isDefault": true
