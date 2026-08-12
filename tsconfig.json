@@ -1,6 +1,15 @@
 {
-    "compilerOptions": {
-        "target": "es6",
-        "sourceMap": false,
-    }
+  "compilerOptions": {
+    "target": "ES2020",       // Use ES2020+ for ESM features (Node.js 14+ supports this)
+    "module": "nodenext",     // Aligns with Node.js's module resolution (ESM/CJS auto-detection)
+    "moduleResolution": "NodeNext", // Matches "module" for consistent resolution
+    "outDir": "./js",       // Output compiled JS here (avoids cluttering src/)
+    "rootDir": "./src",       // Root of your TypeScript source files
+    "strict": true,           // Enforce type safety (optional but recommended)
+    "esModuleInterop": true,  // Enables interoperability between ESM and CommonJS
+    "skipLibCheck": true,     // Speeds up compilation by skipping library checks
+    "forceConsistentCasingInFileNames": true // Avoids OS-specific path casing issues
+  },
+  "include": ["src/**/*"],    // Include all TS files in src/
+  "exclude": ["node_modules"] // Exclude dependencies
 }

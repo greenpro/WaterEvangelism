@@ -2,17 +2,38 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "My build task",
+            "label": "Build Typescript",
             "type": "shell",
             // Assign output file name with VSCode inner variables like ${fileBasename}
-            "command": "/home/craig/WaterEvangelism/node_modules/.bin/tsc -p /home/craig/WaterEvangelism/tsconfig.json; lessc src/style.less style.css",
+            "command": "tsc -p tsconfig.json",
             "options": {
             },
-            "problemMatcher": ["tsc"],
+            "problemMatcher": ["$tsc"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Build Less",
+            "type": "shell",
+            // Assign output file name with VSCode inner variables like ${fileBasename}
+            "command": "lessc src/style.less style.css",
+            "options": {
+            },
+            "problemMatcher": ["$lessc"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Build All",
+            "dependsOn": ["Build Typescript", "Build Less"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
-        }
+        },
     ]
 }
