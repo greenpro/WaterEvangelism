@@ -15,11 +15,11 @@ export type Language = {
     text: string
 }
 
+export interface Dictionary<T> {
+    [key:string]: T
+}
+
 export type Contenent = {
     name: string,
     languages: Dictionary<Language>
-}
-
-export interface Dictionary<T> {
-    [key:string]: T
 }

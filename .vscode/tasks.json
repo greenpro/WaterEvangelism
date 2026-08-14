@@ -15,9 +15,9 @@
             }
         },
         {
-            "label": "minify",
+            "label": "minify js",
             "type": "shell",
-            "command": "uglifyjs js/functions.js -o js/functions.js -m --no-annotations",
+            "command": "rm js/*.min.js;for f in js/*.js; do short=${f%.js}; uglifyjs $f -o $short.min.js -m --no-annotations; done",
             "options": {
             },
             "problemMatcher": ["$uglifyjs"],
@@ -30,7 +30,7 @@
             "label": "Build Less",
             "type": "shell",
             // Assign output file name with VSCode inner variables like ${fileBasename}
-            "command": "lessc src/style.less style.css",
+            "command": "lessc src/style.less css/style.css",
             "options": {
             },
             "problemMatcher": ["$lessc"],
@@ -40,8 +40,20 @@
             }
         },
         {
+            "label": "minify css",
+            "type": "shell",
+            "command": "rm css/*.min.css;for f in css/*.css; do short=${f%.css}; uglifycss $f --output $short.min.css; done",
+            "options": {
+            },
+            "problemMatcher": ["$uglifyjs"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
             "label": "Build All",
-            "dependsOn": ["Build Typescript", "minify", "Build Less"],
+            "dependsOn": ["Build Typescript", "minify js", "Build Less", "minify css"],
             "group": {
                 "kind": "build",
                 "isDefault": true
