@@ -17,10 +17,10 @@
         {
             "label": "minify js",
             "type": "shell",
-            "command": "rm js/*.min.js;for f in js/*.js; do short=${f%.js}; uglifyjs $f -o $short.min.js -m --no-annotations; done",
+            "command": "for f in js/*.js; do uglifyjs $f -o $f -m --no-annotations; done",
             "options": {
             },
-            "problemMatcher": ["$uglifyjs"],
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": false
@@ -29,8 +29,7 @@
         {
             "label": "Build Less",
             "type": "shell",
-            // Assign output file name with VSCode inner variables like ${fileBasename}
-            "command": "lessc src/style.less css/style.css",
+            "command": "for f in src/less/*.less; do short=${f##*/}; short=${short%.less}; lessc $f css/$short.css; done",
             "options": {
             },
             "problemMatcher": ["$lessc"],
@@ -42,10 +41,10 @@
         {
             "label": "minify css",
             "type": "shell",
-            "command": "rm css/*.min.css;for f in css/*.css; do short=${f%.css}; uglifycss $f --output $short.min.css; done",
+            "command": "for f in css/*.css; do uglifycss $f --output $f; done",
             "options": {
             },
-            "problemMatcher": ["$uglifyjs"],
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": false
