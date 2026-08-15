@@ -52,7 +52,7 @@
         },
         {
             "label": "Build All",
-            "dependsOn": ["Build Typescript", "minify js", "Build Less", "minify css"],
+            "dependsOn": ["Build Typescript", /*"minify js",*/ "Build Less", "minify css"],
             "group": {
                 "kind": "build",
                 "isDefault": true
