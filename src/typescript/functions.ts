@@ -1,7 +1,7 @@
 //import {LangList} from "./languages"
-import {Events} from "./events"
+//import {Events} from "./events"
 //import { LangList } from "./languages"
-//import {Dictionary, Statistics, Language} from "./typeDefs"
+import {Dictionary, Statistics, Language} from "./typeDefs"
 //import { Utilities } from "./utilities"
 
 var langList: LangList = new LangList()

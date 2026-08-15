@@ -2,10 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toggleMenu = toggleMenu;
 exports.toggleContenent = toggleContenent;
-//import {LangList} from "./languages"
-const events_1 = require("./events");
-//import { LangList } from "./languages"
-//import {Dictionary, Statistics, Language} from "./typeDefs"
 //import { Utilities } from "./utilities"
 var langList = new LangList();
 function toggleMenu() {
@@ -129,7 +125,7 @@ async function runPopulate() {
         browserLanguagePopulate();
     }
     if (document.title === "Water Evangelism") {
-        var events = new events_1.Events();
+        var events = new Events();
         events.distributionPopulate();
         events.updateNumbers();
     }
