@@ -2,7 +2,7 @@ import {Language, Dictionary, Contenent} from "./typeDefs"
 
 export class LangList
 {
-    private https: string = "httpsjs"
+    private https: string = "https://"
     private w3:    string = this.https + "www."
 
     private glow:    string = this.w3 + "glowonline.org/digital/"
@@ -233,6 +233,10 @@ export class LangList
     private sa_ake: Language = { text:      "Akawaio / Akawaio",          icon:      this.ico + "southAfrica.webp",
                                  primary:   this.egw + "12275.2&index=0", alternate: null,
                                  check:     "egw" }
+    
+//    private eu_da: Language = { test:       "Danish / Dansk", icon="denmark.png",
+//                                primary:    
+//    }
 
     public langList: Dictionary<Contenent> = {
         "common": {

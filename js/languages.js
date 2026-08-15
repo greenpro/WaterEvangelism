@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LangList = void 0;
 class LangList {
     constructor() {
-        this.https = "httpsjs";
+        this.https = "https://";
         this.w3 = this.https + "www.";
         this.glow = this.w3 + "glowonline.org/digital/";
         this.amazing = this.w3 + "amazingfacts.org/";
@@ -190,6 +190,9 @@ class LangList {
         this.sa_ake = { text: "Akawaio / Akawaio", icon: this.ico + "southAfrica.webp",
             primary: this.egw + "12275.2&index=0", alternate: null,
             check: "egw" };
+        //    private eu_da: Language = { test:       "Danish / Dansk", icon="denmark.png",
+        //                                primary:    
+        //    }
         this.langList = {
             "common": {
                 name: "Suggested",

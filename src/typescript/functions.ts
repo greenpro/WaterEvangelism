@@ -1,7 +1,7 @@
 //import {LangList} from "./languages"
 //import {Events} from "./events"
 //import { LangList } from "./languages"
-import {Dictionary, Statistics, Language} from "./typeDefs"
+import {Dictionary, Statistics, Language, Contenent} from "./typeDefs"
 //import { Utilities } from "./utilities"
 
 var langList: LangList = new LangList()
@@ -100,7 +100,7 @@ async function languagePopulate()
         {
             var language = contenent.languages[languageKey]
             contenentDiv.innerHTML += "<div id='" + languageKey + "' class='flex-item'>" +
-                                       "<button class='button-stand-alone language-selection' onclick='location.href='" + redirect(language) + "'>" +
+                                       "<button class='button-stand-alone language-selection' onclick=\"location.href='" + redirect(language) + "'\">" +
                                        "<img src='" + language.icon + "' class='flag-icon' />" +
                                        "<br />" +
                                        language.text +
@@ -111,15 +111,18 @@ async function languagePopulate()
 }
 
 function browserLanguagePopulate()
+
 {
     var browserLanguage = navigator.language.split('-')[0]
 
     var language: Language|null = null
     var contenentKey: string|null = null
     var languageKey: string|null = null
-    for (contenentKey in langList)
+    for (contenentKey in langList.langList)
     {
-        for (languageKey in langList.langList[contenentKey].languages)
+        var contenent: Contenent = langList.langList[contenentKey]
+
+        for (languageKey in contenent.languages)
         {
             if (languageKey == browserLanguage)
             {

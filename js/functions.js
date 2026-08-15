@@ -73,7 +73,7 @@ async function languagePopulate() {
         for (let languageKey in contenent.languages) {
             var language = contenent.languages[languageKey];
             contenentDiv.innerHTML += "<div id='" + languageKey + "' class='flex-item'>" +
-                "<button class='button-stand-alone language-selection' onclick='location.href='" + redirect(language) + "'>" +
+                "<button class='button-stand-alone language-selection' onclick=\"location.href='" + redirect(language) + "'\">" +
                 "<img src='" + language.icon + "' class='flag-icon' />" +
                 "<br />" +
                 language.text +
@@ -87,8 +87,9 @@ function browserLanguagePopulate() {
     var language = null;
     var contenentKey = null;
     var languageKey = null;
-    for (contenentKey in langList) {
-        for (languageKey in langList.langList[contenentKey].languages) {
+    for (contenentKey in langList.langList) {
+        var contenent = langList.langList[contenentKey];
+        for (languageKey in contenent.languages) {
             if (languageKey == browserLanguage) {
                 language = langList.langList[contenentKey].languages[languageKey];
                 break;
