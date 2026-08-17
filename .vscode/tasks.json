@@ -5,7 +5,7 @@
             "label": "Build Typescript",
             "type": "shell",
             // Assign output file name with VSCode inner variables like ${fileBasename}
-            "command": "tsc -p tsconfig.json",
+            "command": "rm js/*.js; tsc -p tsconfig.json",
             "options": {
             },
             "problemMatcher": ["$tsc"],

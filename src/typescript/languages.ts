@@ -136,6 +136,10 @@ export class LangList
     private az_az: Language = { text:    "Azerbaijani / Azərbaycan dili",      icon:      this.ico + "azerbaijan.webp",
                                 primary: this.egw + "13958.2&index=0",         alternate: null,
                                 check:   "egw" }
+    
+    private de_da: Language = { text:       "Danish / Dansk",             icon: this.ico + "denmark.webp",
+                                primary:    this.egw + "11362.3&index=0", alternate: null,
+                                check:      "egw" }
 
     // asia
     private ph_tl: Language = { text:    "Tagalog / Tagalog",                    icon:      this.ico + "philippines.png",
@@ -233,10 +237,6 @@ export class LangList
     private sa_ake: Language = { text:      "Akawaio / Akawaio",          icon:      this.ico + "southAfrica.webp",
                                  primary:   this.egw + "12275.2&index=0", alternate: null,
                                  check:     "egw" }
-    
-//    private eu_da: Language = { test:       "Danish / Dansk", icon="denmark.png",
-//                                primary:    
-//    }
 
     public langList: Dictionary<Contenent> = {
         "common": {
@@ -263,7 +263,7 @@ export class LangList
                 "en": this.gb_en, "fr": this.fr_fr, "pt": this.po_pt, "ru": this.ru_ru, "alt": this.ru_alt, "av": this.ru_av, "de": this.gr_de, "it": this.it_it, 
                 "pl": this.po_pl, "uk": this.uk_uk, "nl": this.ne_nl, "az": this.az_az, "ro":  this.ro_ro,  "cs": this.cz_cs, "sv": this.sw_sv, "hu": this.hu_hu, 
                 "sq": this.al_sq, "bg": this.bu_bg, "hy": this.ar_hy, "sk": this.sl_sk, "fi":  this.fi_fi,  "et": this.es_et, "is": this.ic_is, "no": this.no_no, 
-                "sl": this.sl_sl, "ab": this.ab_ab,
+                "sl": this.sl_sl, "ab": this.ab_ab, "da": this.de_da
             }
         },
         "as": {

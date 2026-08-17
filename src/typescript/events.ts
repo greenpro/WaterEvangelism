@@ -1,5 +1,5 @@
-import {Dictionary, Statistics} from "./typeDefs"
 //import { Utilities } from "./utilities"
+import {Dictionary, Statistics} from "./typeDefs"
 
 export class Events
 {
@@ -20,6 +20,31 @@ export class Events
             unique:    304, 
             languages: 5
         },
+    }
+
+    private distributionPopulate()
+    {
+        var container = document.getElementById("events")
+
+        if (container == null)
+        {
+            return
+        }
+
+        for (let distributionKey in this.distributions)
+        {
+            container.innerHTML += "<div class='flex-item section event'>\
+                                        <div class='section-title'>\
+                                            <img src='" + this.distributions[distributionKey].icon + "' class='event-icon'>\
+                                            <br />" +
+                                            this.distributions[distributionKey].name +
+                                        "</div>\
+                                        Number of bottles: <span id='" + distributionKey + "-bottles'>0</span><br />\
+                                        Total scans: <span id='" + distributionKey + "-total'>0</span><br />\
+                                        Unique scans: <span id='" + distributionKey + "-unique'>0</span><br />\
+                                        languages: <span id='" + distributionKey + "-languages'>0</span><br />\
+                                    </div>"
+        }
     }
 
     private async updateItemNumber(elementId:string, total:number)
@@ -45,32 +70,7 @@ export class Events
         }
     }
 
-    public distributionPopulate()
-    {
-        var container = document.getElementById("events")
-
-        if (container == null)
-        {
-            return
-        }
-
-        for (let distributionKey in this.distributions)
-        {
-            container.innerHTML += "<div class='flex-item section event'>\
-                                        <div class='section-title'>\
-                                            <img src='" + this.distributions[distributionKey].icon + "' class='event-icon'>\
-                                            <br />" +
-                                            this.distributions[distributionKey].name +
-                                        "</div>\
-                                        Number of bottles: <span id='" + distributionKey + "-bottles'>0</span><br />\
-                                        Total scans: <span id='" + distributionKey + "-total'>0</span><br />\
-                                        Unique scans: <span id='" + distributionKey + "-unique'>0</span><br />\
-                                        languages: <span id='" + distributionKey + "-languages'>0</span><br />\
-                                    </div>"
-        }
-    }
-
-    public async updateNumbers()
+    private async updateNumbers()
     {
         for (let distributionKey in this.distributions)
         {
@@ -80,4 +80,19 @@ export class Events
             this.updateItemNumber(distributionKey + "-languages", this.distributions[distributionKey].languages)
         }
     }
+
+    public async runPopulate()
+    {
+        // check that the document is ready
+        while (!document.getElementById("menu")) 
+        {
+            await Utilities.sleep(10);
+        }
+
+        this.distributionPopulate()
+        this.updateNumbers()
+    }
 }
+
+var events: Events = new Events()
+events.runPopulate()

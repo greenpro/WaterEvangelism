@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Events = void 0;
-//import { Utilities } from "./utilities"
 class Events {
     constructor() {
         this.distributions = {
@@ -23,21 +22,6 @@ class Events {
             },
         };
     }
-    async updateItemNumber(elementId, total) {
-        var element = document.getElementById(elementId);
-        if (!element) {
-            return;
-        }
-        var i = 0;
-        for (; i <= total - 10; i += 5) {
-            element.innerText = i.toString();
-            await Utilities.sleep(1);
-        }
-        for (; i <= total; i++) {
-            element.innerText = i.toString();
-            await Utilities.sleep(100);
-        }
-    }
     distributionPopulate() {
         var container = document.getElementById("events");
         if (container == null) {
@@ -57,6 +41,21 @@ class Events {
                                     </div>";
         }
     }
+    async updateItemNumber(elementId, total) {
+        var element = document.getElementById(elementId);
+        if (!element) {
+            return;
+        }
+        var i = 0;
+        for (; i <= total - 10; i += 5) {
+            element.innerText = i.toString();
+            await Utilities.sleep(1);
+        }
+        for (; i <= total; i++) {
+            element.innerText = i.toString();
+            await Utilities.sleep(100);
+        }
+    }
     async updateNumbers() {
         for (let distributionKey in this.distributions) {
             this.updateItemNumber(distributionKey + "-bottles", this.distributions[distributionKey].bottles);
@@ -65,5 +64,15 @@ class Events {
             this.updateItemNumber(distributionKey + "-languages", this.distributions[distributionKey].languages);
         }
     }
+    async runPopulate() {
+        // check that the document is ready
+        while (!document.getElementById("menu")) {
+            await Utilities.sleep(10);
+        }
+        this.distributionPopulate();
+        this.updateNumbers();
+    }
 }
 exports.Events = Events;
+var events = new Events();
+events.runPopulate();
