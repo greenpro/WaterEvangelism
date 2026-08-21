@@ -6,7 +6,7 @@ class LanguageSelection {
         this.langList = new LangList();
     }
     redirect(language) {
-        if (this.langList.availability[language.check]) {
+        if (LangList.availability[language.check]) {
             return language.primary;
         }
         else if (language.alternate) {
@@ -31,7 +31,7 @@ class LanguageSelection {
                 direction = "down";
             }
             container.innerHTML += "<div class='section'>" +
-                "<div class='section-title' onclick='toggleContenent(\"" + contenentKey + "\")'>" +
+                "<div class='section-title' onclick=\"LanguageSelection.toggleContenent('" + contenentKey + "')\">" +
                 contenent.name + "<i id='" + contenentKey + "-caret' class='fa fa-caret-" + direction + "' aria-hidden='true'></i>" +
                 "</div>" +
                 "<div id='" + contenentKey + "' class='flex-container' style='display:" + display + "'>" +
@@ -46,7 +46,7 @@ class LanguageSelection {
                 var language = contenent.languages[languageKey];
                 contenentDiv.innerHTML += "<div id='" + languageKey + "' class='flex-item'>" +
                     "<button class='button-stand-alone language-selection' onclick=\"location.href='" + this.redirect(language) + "'\">" +
-                    "<img src='" + language.icon + "' class='flag-icon' />" +
+                    "<img src='countries/" + language.icon + "' class='flag-icon' />" +
                     "<br />" +
                     language.text +
                     "</button>" +
@@ -82,7 +82,7 @@ class LanguageSelection {
         console.log(contenentDiv);
         contenentDiv.innerHTML += "<div id='" + languageKey + "' class='flex-item'>" +
             "<button class='button-stand-alone language-selection' onclick='location.href='" + this.redirect(language) + "'>" +
-            "<img src='" + language.icon + "' class='flag-icon' />" +
+            "<img src='countries/" + language.icon + "' class='flag-icon' />" +
             "<br />" +
             language.text +
             "</button>" +

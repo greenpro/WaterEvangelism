@@ -8,11 +8,11 @@ export type Statistics = {
 }
 
 export type Language = {
-    check: string,
+    text: string
+    icon: string,
     primary: string,
     alternate: string | null,
-    icon: string,
-    text: string
+    check: string,
 }
 
 export interface Dictionary<T> {

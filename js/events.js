@@ -4,9 +4,17 @@ exports.Events = void 0;
 class Events {
     constructor() {
         this.distributions = {
+            "total": {
+                name: "",
+                icon: "",
+                bottles: 11921,
+                total: 527,
+                unique: 375,
+                languages: 5,
+            },
             "fair": {
                 name: "Johnson County Fair 2026",
-                icon: "events/fair.jpg",
+                icon: "fair.jpg",
                 bottles: 1921,
                 total: 70,
                 unique: 52,
@@ -14,7 +22,7 @@ class Events {
             },
             "soccer": {
                 name: "Soccer Tournament 2026",
-                icon: "events/soccer.bmp",
+                icon: "soccer.bmp",
                 bottles: 10000,
                 total: 407,
                 unique: 304,
@@ -28,9 +36,12 @@ class Events {
             return;
         }
         for (let distributionKey in this.distributions) {
+            if (distributionKey == "total") {
+                continue;
+            }
             container.innerHTML += "<div class='flex-item section event'>\
                                         <div class='section-title'>\
-                                            <img src='" + this.distributions[distributionKey].icon + "' class='event-icon'>\
+                                            <img src='events/" + this.distributions[distributionKey].icon + "' class='event-icon'>\
                                             <br />" +
                 this.distributions[distributionKey].name +
                 "</div>\
