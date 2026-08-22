@@ -35,6 +35,9 @@ export class LangList
 
     // mx_es
     private sp_es: Language = this.mx_es
+    private sp_ca: Language = { text:    "Catalan / Català",           icon: this.sp_es.icon,
+                                primary: this.egw + "12377.2&index=0", alternate: null,
+                                check:   "egw" }
 
     // br_pt
     private po_pt: Language = { text:    this.br_pt.text,    icon:        "portugal.webp",
@@ -116,7 +119,7 @@ export class LangList
                                 check:   "hope" }
 
     private bu_bg: Language = { text:    "Bulgarian / Български",      icon:      "bulgaria.webp",
-                                primary: this.hope + "bg",             alternate: null,
+                                primary: this.hope + "bg",             alternate: this.egw + "12888.2&index=0",
                                 check:   "hope" }
 
     private es_et: Language = { text:      "Estonian / Eesti",                           icon:      "estonia.webp",
@@ -138,6 +141,10 @@ export class LangList
     private de_da: Language = { text:       "Danish / Dansk",             icon: "denmark.webp",
                                 primary:    this.egw + "11362.3&index=0", alternate: null,
                                 check:      "egw" }
+    
+    private bo_bs: Language = { text:    "Bosnian / босански",         icon:      "bosnia.webp",
+                                primary: this.egw + "14301.1&index=0", alternate: null,
+                                check:   "egw" }
 
     // asia
     private ph_tl: Language = { text:    "Tagalog / Tagalog",                    icon:      "philippines.png",
@@ -197,7 +204,7 @@ export class LangList
                                 check:   "hope" }
 
     private ba_bn: Language = { text:    "Bengali / বাংলা",                             icon:      "bangladesh.webp",
-                                primary: this.yt + "vVAlSkq3MXT2bEO9AhxMC2zLl-YWVKc2", alternate: null,
+                                primary: this.yt + "vVAlSkq3MXT2bEO9AhxMC2zLl-YWVKc2", alternate: this.egw + "11836.2&index=0",
                                 check:   "youtube" }
 
     private mo_mn: Language = { text:      "Mongolian / Монгол",                         icon:      "mongolia.webp",
@@ -207,7 +214,12 @@ export class LangList
     private np_ne: Language = { text:      "Nepali / नेपाली",                              icon:      "nepal.webp",
                                 primary:   this.yt + "lwfrqmdZg6duWW3JNHAh7JzEKXvkSX-7", alternate: null,
                                 check:     "youtube" }
+    private my_my: Language = { text:    "Burmese / မြန်မာနိုင်ငံ",         icon: "myanmar.webp",
+                                primary: this.egw + "11707.2&index=0", alternate: null,
+                                check:   "egw"
+    }
 
+    // middle east
     private aa_ar: Language = { text:    "Arabic / العربية",                                                          icon:      "saudiArabia.png",
                                 primary: this.amazing + "ar/%d8%b9%d9%85%d9%84-%d8%a7%d9%84%d8%b1%d8%a7%d8%a6%d9%84", alternate: this.yt + "WT5oIAjLwXM4WJsRmeK98F4x7P5MupWk",
                                 check:   "amazing" }
@@ -239,11 +251,15 @@ export class LangList
                                  primary:   this.egw + "12275.2&index=0", alternate: null,
                                  check:     "egw" }
 
+    private ca_bum: Language = { text: "Bulu / Nkobô Bulu",             icon:      "cameroon.webp",
+                                 primary: this.egw + "11844.2&index=0", alternate: null,
+                                 check: "egw" }
+
     public langList: Dictionary<Contenent> = {
         "common": {
             name: "Suggested",
             languages: {
-                "en": this.us_en, "sp": this.sp_es,
+                "en": this.us_en, "sp": this.mx_es,
             }
         },
         "na": {
@@ -261,18 +277,19 @@ export class LangList
         "eu": {
             name: "Europe",
             languages: {
-                "en": this.gb_en, "fr": this.fr_fr, "pt": this.po_pt, "ru": this.ru_ru, "alt": this.ru_alt, "av": this.ru_av, "de": this.gr_de, "it": this.it_it, 
-                "pl": this.po_pl, "uk": this.uk_uk, "nl": this.ne_nl, "az": this.az_az, "ro":  this.ro_ro,  "cs": this.cz_cs, "sv": this.sw_sv, "hu": this.hu_hu, 
-                "sq": this.al_sq, "bg": this.bu_bg, "hy": this.ar_hy, "sk": this.sl_sk, "fi":  this.fi_fi,  "et": this.es_et, "is": this.ic_is, "no": this.no_no, 
-                "sl": this.sl_sl, "ab": this.ab_ab, "da": this.de_da
+                "en": this.gb_en, "fr": this.fr_fr, "es": this.sp_es, "ca": this.sp_ca, "pt": this.po_pt, "ru": this.ru_ru, 
+                "alt": this.ru_alt, "av": this.ru_av, "de": this.gr_de, "it": this.it_it, "pl": this.po_pl, "uk": this.uk_uk, 
+                "nl": this.ne_nl, "az": this.az_az, "ro": this.ro_ro, "cs": this.cz_cs, "sv": this.sw_sv, "hu": this.hu_hu, 
+                "sq": this.al_sq, "bg": this.bu_bg, "hy": this.ar_hy, "sk": this.sl_sk, "fi": this.fi_fi, "et": this.es_et, 
+                "is": this.ic_is, "no": this.no_no, "sl": this.sl_sl, "ab": this.ab_ab, "da": this.de_da, "bs": this.bo_bs
             }
         },
         "as": {
             name: "asia",
             languages: {
-                "zh":  this.ch_zh,  "hi": this.in_hi, "ur": this.in_ur, "pa":  this.in_pa,  "mr":  this.in_mr,  "te":  this.in_te, "ta":  this.in_ta,
+                "zh":  this.ch_zh,  "hi": this.in_hi, "ur": this.in_ur, "pa":  this.in_pa,  "mr":  this.in_mr,  "te":  this.in_te,  "ta": this.in_ta,
                 "bho": this.in_bho, "kn": this.in_kn, "ml": this.in_ml, "as":  this.in_as,  "sat": this.in_sat, "lus": this.in_lus, "bn": this.ba_bn, 
-                "ja":  this.ja_ja,  "ko": this.ko_ko, "tl": this.ph_tl, "ceb": this.ph_ceb, "ne":  this.np_ne,  "mn":  this.mo_mn
+                "ja":  this.ja_ja,  "ko": this.ko_ko, "tl": this.ph_tl, "ceb": this.ph_ceb, "ne":  this.np_ne,  "mn":  this.mo_mn,  "my": this.my_my,
             }
         },
         "me": {
@@ -290,7 +307,7 @@ export class LangList
         "af": {
             name: "africa",
             languages: {
-                "am": this.et_am, "mg": this.ma_mg, "af": this.sa_af, "ake": this.sa_ake,
+                "am": this.et_am, "mg": this.ma_mg, "af": this.sa_af, "ake": this.sa_ake, "bum": this.ca_bum,
             }
         },
     }
