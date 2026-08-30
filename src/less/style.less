@@ -16,6 +16,9 @@
 @border_width_title: 0px 0px @border_width 0px;
 @border_width_footer: @border_width 0px 0px 0px;
 
+@border_radius: 30px;
+@border_radius_inner: 26px;
+
 html {
     font-family: "Saira", sans-serif;
     background-color: @color_mainBg;
@@ -24,7 +27,7 @@ html {
 #title {
     text-align: center;
     border-width: @border_width;
-    border-radius: 30px;
+    border-radius: @border_radius;
     border-style: solid;
     border-color: @color_border;
     background-color: @color_mottoBg;
@@ -37,7 +40,7 @@ html {
 #main-title {
     background-color: @color_titleBg;
     border-width: @border_width_title;
-    border-radius: 26px;
+    border-radius: @border_radius_inner;
     border-style: solid;
     border-color: @color_border;
     margin: 0px;
@@ -88,11 +91,11 @@ button {
     text-align: left;
 }
 .button-top {
-    border-radius: 30px 30px 0px 0px;
+    border-radius: @border_radius @border_radius 0px 0px;
     border-width: @border_width;
 }
 .button-bottom {
-    border-radius: 0px 0px 30px 30px;
+    border-radius: 0px 0px @border_radius @border_radius;
 }
 .button-stand-alone {
     border-width: @border_width;
@@ -113,7 +116,7 @@ button {
     border-color: @color_border;
     border-style: solid;
     border-width: @border_width;
-    border-radius: 30px;
+    border-radius: @border_radius;
     padding: 30px;
     margin: 0px 3% 40px 3%;
     font-size: 20pt;
@@ -122,7 +125,7 @@ button {
     .section-title {
         background-color: @color_sectionTitle;
         border-width: @border_width_title;
-        border-radius: 26px;
+        border-radius: @border_radius_inner;
         border-style: solid;
         border-color: @color_border;
         margin: -30px -30px 30px -30px;
@@ -133,7 +136,7 @@ button {
     .section-footer {
         background-color: @color_sectionFooter;
         border-width: @border_width_footer;
-        border-radius: 26px;
+        border-radius: @border_radius_inner;
         border-style: solid;
         border-color: @color_border;
         margin: 30px -30px -30px -30px;
@@ -191,5 +194,13 @@ ul > li {
 }
 
 .map {
+    aspect-ratio: 2/1;
+}
+
+.map-frame {
+    border-radius: @border_radius_inner;
+    border-color: @color_border;
+    border-style: solid;
+    overflow: hidden;
     aspect-ratio: 2/1;
 }
