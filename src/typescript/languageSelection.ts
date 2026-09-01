@@ -1,5 +1,5 @@
-//import {LangList} from "./languages"
 //import { LangList } from "./languages"
+//import { Utilities } from "./utilities"
 import {Contenent, Language} from "./typeDefs"
 
 export class LanguageSelection 
@@ -150,11 +150,7 @@ export class LanguageSelection
 
     public async runPopulate()
     {
-        // check that the document is ready
-        while (!document.getElementById("menu")) 
-        {
-            await Utilities.sleep(10);
-        }
+        await Utilities.DocumentReady()
 
         this.languagePopulate()
         this.browserLanguagePopulate()

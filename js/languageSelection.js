@@ -104,10 +104,7 @@ class LanguageSelection {
         }
     }
     async runPopulate() {
-        // check that the document is ready
-        while (!document.getElementById("menu")) {
-            await Utilities.sleep(10);
-        }
+        await Utilities.DocumentReady();
         this.languagePopulate();
         this.browserLanguagePopulate();
     }

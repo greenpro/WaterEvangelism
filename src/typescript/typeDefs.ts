@@ -23,3 +23,9 @@ export type Contenent = {
     name: string,
     languages: Dictionary<Language>
 }
+
+export class MenuButton
+{
+    public HrefPrefix:  string = ""
+    public ButtonClass: string = ""
+}

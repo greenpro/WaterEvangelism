@@ -151,6 +151,9 @@ ul > li {
 .fa-caret-up {
   padding-left: 20px;
 }
+.map {
+  aspect-ratio: 2/1;
+}
 .map-frame {
   border-radius: 26px;
   border-color: #000000;
