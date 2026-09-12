@@ -1,5 +1,6 @@
-import {Language, Dictionary, Contenent} from "./typeDefs"
+//import {Language, Dictionary, Contenent, CheckLocation} from "./typeDefs"
 
+    
 export class LangList
 {
     private https: string = "https://"
@@ -16,16 +17,16 @@ export class LangList
     // north america
     private us_en: Language = { text:    "English / English",   icon:        "us.png",
                                 primary: this.glow + "english", alternate:   this.hope + "org",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private mx_es: Language = { text:    "Spanish / Español",  icon:        "spain.png", 
                                 primary: this.glow +"espanol", alternate:   this.amazing + "es/inicio/",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     // south america
     private br_pt: Language = { text:    "Portuguese / Português",   icon:        "brazil.png",
                                 primary: this.amazing + "pt/inicio", alternate:   this.w3 + "novotempo.com/",
-                                check:   "amazing" }
+                                check:   CheckLocation.AmazingFacts }
 
     // europe
     // us_en
@@ -37,7 +38,7 @@ export class LangList
     private sp_es: Language = this.mx_es
     private sp_ca: Language = { text:    "Catalan / Català",           icon: this.sp_es.icon,
                                 primary: this.egw + "12377.2&index=0", alternate: null,
-                                check:   "egw" }
+                                check:   CheckLocation.EGW }
 
     // br_pt
     private po_pt: Language = { text:    this.br_pt.text,    icon:        "portugal.webp",
@@ -46,214 +47,214 @@ export class LangList
 
     private fr_fr: Language = { text:    "French / Français",         icon:      "france.png",
                                 primary: this.amazing + "fr/accueil", alternate: this.https + "hcf.tv",
-                                check:   "amazing" }
+                                check:   CheckLocation.AmazingFacts }
 
     private gr_de: Language = { text:    "German / Deutsch", icon:        "germany.png",
                                 primary: this.hope + "de",   alternate:   this.amazing + "de/startseite",
-                                check:   "hope" }
+                                check:   CheckLocation.HopeChannel }
 
     private ru_ru:  Language = { text:    "Russian / Русский",                                            icon:      "russia.png",
                                  primary: this.amazing + "ru/%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%b0%d1%8f", alternate: this.hope + "ru",
-                                 check:   "amazing" }
+                                 check:   CheckLocation.AmazingFacts }
     private ru_alt: Language = { text:    "Altay / Алтай",              icon:      this.ru_ru.icon,
                                  primary: this.egw + "12111.2&index=0", alternate: this.ru_ru.alternate,
-                                 check:   "egw" } // replace
+                                 check:   CheckLocation.EGW } // replace
     private ru_av:  Language = { text:    "Avar / Авар",                icon:      this.ru_ru.icon,
                                  primary: this.egw + "13992.2&index=0", alternate: this.ru_ru.alternate,
                                  check:   this.ru_ru.check } // replace
 
     private ro_ro: Language = { text:    "Romanian / Română",                   icon:      "romania.png",
                                 primary: this.w3 + "glowonline.org/glow-roman", alternate: this.w3 + "sperantatv.ro/",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private uk_uk: Language = { text:    "Ukrainian / Українська",  icon:        "ukraine.png",
                                 primary: this.https + "tv.hope.ua", alternate:   this.w3 + "glowonline.org/gyd/ukrainian",
-                                check:   "hope" }
+                                check:   CheckLocation.HopeChannel }
 
     private ne_nl: Language = { text:    "Dutch / Nederlands",                  icon:        "netherlands.png",
                                 primary: this.w3 + "glowonline.org/glow-dutch", alternate:   this.https + "hopechannel.dk",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private cz_cs: Language = { text:    "Czech / Čeština",                icon:      "czech.png",
                                 primary: this.w3 + "glowonline.org/czech", alternate: this.hope + "cz",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private hu_hu: Language = { text:    "Hungarian / Magyar",               icon:      "hungary.png",
                                 primary: this.w3 + "glowonline.org/hungary", alternate: this.https + "remenytv.hu",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private sl_sl: Language = { text:    "Slovenian / Slovenščina",                icon:      "slovenia.png",
                                 primary: this.w3 + "glowonline.org/glow-slovensk", alternate: null,
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private ar_hy: Language = { text:    "Armenian / Հայերեն",                     icon:      "armenia.png",
                                 primary: this.w3 + "glowonline.org/glow-armenian", alternate: this.egw + "11414.89&index=0",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private no_no: Language = { text:    "Norwegian / Norsk",                   icon:      "norway.png",
                                 primary: this.w3 + "glowonline.org/norwegian/", alternate: this.https + "hopechannel.no",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private po_pl: Language = { text:    "Polish / Polski",             icon:      "poland.png",
                                 primary: this.w3 + "glowonline.org/pl", alternate: this.https + "hopechannel.pl",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private it_it: Language = { text:    "Italian / Italiano",        icon:      "italy.png",
                                 primary: this.https + "hopemedia.it", alternate: this.amazing + "it/casa",
-                                check:   "hope" }
+                                check:   CheckLocation.HopeChannel }
 
     private sl_sk: Language = { text:    "Slovak / Slovenčina",                  icon:      "slovakia.png",
                                 primary: this.w3 + "glowonline.org/glow-slovak", alternate: null,
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private sw_sv: Language = { text:    "Swedish / Svenska",      icon:      "sweden.webp",
                                 primary: this.amazing + "sv/hem",  alternate: null,
-                                check:   "amazing" }
+                                check:   CheckLocation.AmazingFacts }
 
     private ic_is: Language = { text:    "Icelandic / Íslenska",        icon:      "iceland.webp",
                                 primary: this.https + "hopechannel.is", alternate: null,
-                                check:   "hope" }
+                                check:   CheckLocation.HopeChannel }
 
     private fi_fi: Language = { text:    "Finnish / Suomi",             icon:      "finland.webp",
                                 primary: this.https + "hopechannel.fi", alternate: null,
-                                check:   "hope" }
+                                check:   CheckLocation.HopeChannel }
 
     private bu_bg: Language = { text:    "Bulgarian / Български",      icon:      "bulgaria.webp",
                                 primary: this.hope + "bg",             alternate: this.egw + "12888.2&index=0",
-                                check:   "hope" }
+                                check:   CheckLocation.HopeChannel }
 
     private es_et: Language = { text:      "Estonian / Eesti",                           icon:      "estonia.webp",
                                 primary:   this.yt + "ZEr7IMVNuJ-E-RH-shSlCrp2snoBpsHH", alternate: null,
-                                check:     "youtube" }
+                                check:     CheckLocation.Youtube }
 
     private ab_ab: Language = { text:    "Abkhazian / Аҧсшәа",         icon:      "abkhazia.webp",
                                 primary: this.egw + "13987.2&index=0", alternate: null,
-                                check:   "egw" }
+                                check:   CheckLocation.EGW }
 
     private al_sq: Language = { text:    "Albanian / Shqip",           icon:      "albania.webp",
                                 primary: this.egw + "14649.2&index=0", alternate: null,
-                                check:   "egw" }
+                                check:   CheckLocation.EGW }
 
     private az_az: Language = { text:    "Azerbaijani / Azərbaycan dili",      icon:      "azerbaijan.webp",
                                 primary: this.egw + "13958.2&index=0",         alternate: null,
-                                check:   "egw" }
+                                check:   CheckLocation.EGW }
     
     private de_da: Language = { text:       "Danish / Dansk",             icon: "denmark.webp",
                                 primary:    this.egw + "11362.3&index=0", alternate: null,
-                                check:      "egw" }
+                                check:      CheckLocation.EGW }
     
     private bo_bs: Language = { text:    "Bosnian / босански",         icon:      "bosnia.webp",
                                 primary: this.egw + "14301.1&index=0", alternate: null,
-                                check:   "egw" }
+                                check:   CheckLocation.EGW }
 
     // asia
     private ph_tl: Language = { text:    "Tagalog / Tagalog",                    icon:      "philippines.png",
                                 primary: this.w3 + "glowonline.org/gyd/tagalog", alternate: this.hope + "ph",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
     private ph_ceb: Language = { text:    "Cebuano / Cebuano",      icon:      this.ph_tl.icon,
                                  primary: this.hope + "ph",         alternate: this.yt + "3G8y_le8ywcmP5itbBKMjfnONkaffZag",
-                                 check:   "hope" }
+                                 check:   CheckLocation.HopeChannel }
 
     private in_hi:  Language = { text:    "Hindi / हिन्दी",                                icon:      "india.png",
                                  primary: this.https + "hopechannelhindi.in",           alternate: this.yt + "Oky4rbGNIg5dHBNuJvvqgMa2Ii6KpnIe",
-                                 check:   "hope" }
+                                 check:   CheckLocation.HopeChannel }
     private in_ur: Language = { text:    "Urdu / اُردُو",                icon:      this.in_hi.icon,
                                 primary: this.egw + "11848.2&index=0", alternate: null,
-                                check:   "egw" }
+                                check:   CheckLocation.EGW }
     private in_bho: Language = { text:    "Bhojpuri / भोजपुरी",                           icon:      this.in_hi.icon,
                                  primary: this.yt + "089YS6WSH25sDH7ER5BgnwS7v7Bg4pCz", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_kn:  Language = { text:    "Kannada / ಕನ್ನಡ",                             icon:      this.in_hi.icon,
                                  primary: this.yt + "gNnLiuGItn9dhgqGspjuaBe8xOgbT6EA", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_ml:  Language = { text:    "Malayalam / മലയാളം",                        icon:      this.in_hi.icon,
                                  primary: this.yt + "vsmbgvwm_ED2XeWPzCTI-kV4NyaPCTIh", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_mr:  Language = { text:    "Marathi / मराठी",                             icon:      this.in_hi.icon,
                                  primary: this.yt + "L4YnkccIwPTGCeaN1rDoowg1t-V7yv3n", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_lus: Language = { text:    "Mizo / Duhlián ṭawng",                       icon:      this.in_hi.icon,
                                  primary: this.yt + "vaZsdR4oRfNV8NzEFVMgksOdrfjHR6Wu", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_pa:  Language = { text:    "Punjabi / ਪੰਜਾਬੀ",                             icon:      this.in_hi.icon,
                                  primary: this.yt + "0msRlgSUO5kNPD-1ldKOzrmBJjs313pR", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_sat: Language = { text:    "Santali /ᱥᱟᱱᱛᱟ",                            icon:      this.in_hi.icon,
                                  primary: this.yt + "ancRlPt_m7dU7XssCvv6N6FtYWnCMgAY", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_ta: Language = {  text:    "Tamil / தமிழ்",                              icon:      this.in_hi.icon,
                                  primary: this.yt + "T_TN2KLM48FtF3rsMUM17sLu4Q-eVu7F", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_te: Language = {  text:    "Telugu / తెలుగు",                             icon:      this.in_hi.icon,
                                  primary: this.yt + "4yGTeBkSwpQFKxOYsw0Vx7PzS53Yv6FH", alternate: null,
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private in_as: Language = {  text:      "Assamese / অসমীয়া",                        icon:      this.in_hi.icon,
                                  primary:   this.egw + "14104.3&index=0",               alternate: null,
-                                 check:     "egw" }
+                                 check:     CheckLocation.EGW }
 
     private ja_ja: Language = { text:    "Japanese / 日本語",         icon:      "japan.png",
                                 primary: this.w3 + "hopechannel.jp", alternate: this.amazing + "ja/%e3%83%9b%e3%83%bc%e3%83%a0",
-                                check:   "hope" }
+                                check:   CheckLocation.HopeChannel }
 
     private ch_zh: Language = { text:    "Chinese / 中文",                         icon:      "china.png",
                                 primary: this.w3 + "glowonline.org/glow-chinese", alternate: this.w3 + "chinesehope.tv",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private ko_ko: Language = { text:    "Korean / 한국어",              icon:      "southKorea.png",
                                 primary: this.https + "hopechannel.kr", alternate: this.amazing + "ko/%ed%99%88",
-                                check:   "hope" }
+                                check:   CheckLocation.HopeChannel }
 
     private ba_bn: Language = { text:    "Bengali / বাংলা",                             icon:      "bangladesh.webp",
                                 primary: this.yt + "vVAlSkq3MXT2bEO9AhxMC2zLl-YWVKc2", alternate: this.egw + "11836.2&index=0",
-                                check:   "youtube" }
+                                check:   CheckLocation.Youtube }
 
     private mo_mn: Language = { text:      "Mongolian / Монгол",                         icon:      "mongolia.webp",
                                 primary:   this.yt + "pa-sOKy3XOg5HlQE78epu5TySblHRr0A", alternate: null,
-                                check:     "youtube" }
+                                check:     CheckLocation.Youtube }
 
     private np_ne: Language = { text:      "Nepali / नेपाली",                              icon:      "nepal.webp",
                                 primary:   this.yt + "lwfrqmdZg6duWW3JNHAh7JzEKXvkSX-7", alternate: null,
-                                check:     "youtube" }
+                                check:     CheckLocation.Youtube }
     private my_my: Language = { text:    "Burmese / မြန်မာနိုင်ငံ",         icon: "myanmar.webp",
                                 primary: this.egw + "11707.2&index=0", alternate: null,
-                                check:   "egw"
+                                check:   CheckLocation.EGW
     }
 
     // middle east
     private aa_ar: Language = { text:    "Arabic / العربية",                                                          icon:      "saudiArabia.png",
                                 primary: this.amazing + "ar/%d8%b9%d9%85%d9%84-%d8%a7%d9%84%d8%b1%d8%a7%d8%a6%d9%84", alternate: this.yt + "WT5oIAjLwXM4WJsRmeK98F4x7P5MupWk",
-                                check:   "amazing" }
+                                check:   CheckLocation.AmazingFacts }
 
     // oceana
     private id_in: Language = { text:     "Indonesian / Bahasa Indonesia",      icon:      "indonesia.png",
                                 primary:  this.https + "hopechannel.id",        alternate: this.w3 + "glowonline.org/glow-indonesian",
-                                check:    "hope" }
+                                check:    CheckLocation.HopeChannel }
     private id_day: Language = { text:    "Dayak / Dayak",                                      icon:      "indonesia.png",
                                  primary: this.yt + "yKtCIFEspXopT_8PB3Z94nLEb8K2i-Y_&index=3", alternate: this.id_in.alternate, // replace
-                                 check:   "youtube" }
+                                 check:   CheckLocation.Youtube }
     private id_jv:  Language = { text:    "Javanese / Basa Jawa",                       icon:      "indonesia.png",
                                  primary: this.yt + "8sdRUaIOJDif3RKihBrX8AyGVwLGB4Lo", alternate: this.id_in.alternate, // replace
-                                 check:   "youtube", }
+                                 check:   CheckLocation.Youtube, }
 
     // africa
     private et_am: Language = { text:    "Amharic / አማርኛ",      icon:      "ethiopia.png",
                                 primary: this.glow + "amharic", alternate: this.egw + "14077.2&index=0",
-                                check:   "glow" }
+                                check:   CheckLocation.Glow }
 
     private ma_mg: Language = { text:      "Malagasy / Malagasy",                        icon:      "madagascar.webp",
                                 primary:   this.yt + "g8tlFOeVN58vwyt7-up5LZDRpdwHcbIa", alternate: null,
-                                check:     "youtube" }
+                                check:     CheckLocation.Youtube }
 
     private sa_af: Language = { text:      "Afrikaans / Afrikaans",      icon:      "southAfrica.webp",
                                 primary:   this.egw + "11589.2&index=0", alternate: null,
-                                check:     "egw" }
+                                check:     CheckLocation.EGW }
     private sa_ake: Language = { text:      "Akawaio / Akawaio",          icon:      "southAfrica.webp",
                                  primary:   this.egw + "12275.2&index=0", alternate: null,
-                                 check:     "egw" }
+                                 check:     CheckLocation.EGW }
 
     private ca_bum: Language = { text: "Bulu / Nkobô Bulu",             icon:      "cameroon.webp",
                                  primary: this.egw + "11844.2&index=0", alternate: null,
-                                 check: "egw" }
+                                 check: CheckLocation.EGW }
 
     public langList: Dictionary<Contenent> = {
         "common": {
@@ -312,11 +313,11 @@ export class LangList
         },
     }
 
-    public static availability: {[id: string]: boolean} = {
-        "glow":    false,
-        "hope":    false,
-        "amazing": false,
-        "egw":     false,
-        "youtube": true,
-    }
+    public static availability: boolean[] = [
+        false, // glow
+        false, // amazing facts
+        false, // hope channel
+        false, // egw
+        true,  // youtube
+    ]
 }

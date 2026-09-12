@@ -1,4 +1,7 @@
 "use strict";
+//import { LangList } from "./languages"
+//import { Utilities } from "./utilities"
+//import {Contenent, Language} from "./typeDefs"
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LanguageSelection = void 0;
 class LanguageSelection {

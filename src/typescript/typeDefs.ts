@@ -7,12 +7,20 @@ export type Statistics = {
     languages: number
 }
 
+export enum CheckLocation {
+    Glow = 0,
+    AmazingFacts,
+    HopeChannel,
+    EGW,
+    Youtube
+}
+
 export type Language = {
     text: string
     icon: string,
     primary: string,
     alternate: string | null,
-    check: string,
+    check: CheckLocation,
 }
 
 export interface Dictionary<T> {
