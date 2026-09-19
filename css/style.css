@@ -162,20 +162,32 @@ ul > li {
   aspect-ratio: 2/1;
 }
 .dropdown-rotate-down {
-  animation-name: dropdown;
+  animation-name: dropdown-rotate-down;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  transform-origin: 20pt;
+  transition: transform is ease-in-out;
 }
 .dropdown-rotate-up {
-  animation-name: dropdown;
+  animation-name: dropdown-rotate-up;
   animation-duration: 0.5s;
-  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
+  transform-origin: 20pt;
+  transition: transform is ease-in-out;
 }
-@keyframes dropdown {
+@keyframes dropdown-rotate-down {
   from {
-    transform: rotateX(0deg);
+    transform: rotateZ(180deg);
   }
   to {
-    transform: rotateX(180deg);
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes dropdown-rotate-up {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(180deg);
   }
 }

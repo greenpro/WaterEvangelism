@@ -43,17 +43,17 @@ export class LanguageSelection
             var contenent = this.langList.langList[contenentKey]
 
             var display = "none"
-            var direction = "up"
+            var direction = "dropdown-rotate-down"
             if (contenentKey == "common")
             {
                 display = "flex"
-                direction = "down"
+                direction = "dropdown-rotate-up"
             }
             container.innerHTML += "<div class='section'>" +
                                   "<div class='section-title' onclick=\"LanguageSelection.toggleContenent('" + contenentKey + "')\">" +
-                                  contenent.name + "<i id='" + contenentKey + "-caret' class='fa fa-caret-" + direction + "' aria-hidden='true'></i>" +
+                                  contenent.name + "<i id='" + contenentKey + "-caret' class='fa fa-caret-up " + direction + "' aria-hidden='true'></i>" +
                                   "</div>" +
-                                  "<div id='" + contenentKey + "' class='flex-container' style='display:" + display + "'>" +
+                                  "<div id='" + contenentKey + "' class='flex-container' style='display: " + display + "'>" +
                                   "</div>" +
                                   "</div>"
 
@@ -136,15 +136,19 @@ export class LanguageSelection
             return
         }
 
+        console.log(langs.style.display)
+        console.log(langs.style.display == "flex")
         if (langs.style.display == "flex")
         {
             langs.style.display = "none"
-            caret.classList = "fa fa-caret-up dropdown-rotate-up"
+            caret.classList.remove("dropdown-rotate-up")
+            caret.classList.add("dropdown-rotate-down")
         }
         else
         {
             langs.style.display = "flex"
-            caret.classList = "fa fa-caret-down dropdown-rotate-down"
+            caret.classList.remove("dropdown-rotate-down")
+            caret.classList.add("dropdown-rotate-up")
         }
     }
 

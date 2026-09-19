@@ -206,16 +206,24 @@ ul > li {
 }
 
 .dropdown-rotate-down {
-    animation-name: dropdown;
+    animation-name: dropdown-rotate-down;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    transform-origin: 20pt;
+    transition: transform is ease-in-out;
 }
 .dropdown-rotate-up {
-    animation-name: dropdown;
+    animation-name: dropdown-rotate-up;
     animation-duration: 0.5s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
+    transform-origin: 20pt;
+    transition: transform is ease-in-out;
 }
-@keyframes dropdown {
-    from {transform: rotateX(0deg);}
-    to {transform: rotateX(180deg);}
+@keyframes dropdown-rotate-down {
+    from {transform: rotateZ(180deg);}
+    to {transform: rotateZ(0deg);}
+}
+@keyframes dropdown-rotate-up {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(180deg);}
 }
