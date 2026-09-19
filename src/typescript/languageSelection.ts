@@ -1,5 +1,5 @@
 //import { LangList } from "./languages"
-//import { Utilities } from "./utilities"
+//import { Utilities } from "./globalFunctions"
 //import {Contenent, Language} from "./typeDefs"
 
 export class LanguageSelection 
@@ -139,12 +139,12 @@ export class LanguageSelection
         if (langs.style.display == "flex")
         {
             langs.style.display = "none"
-            caret.classList = "fa fa-caret-up"
+            caret.classList = "fa fa-caret-up dropdown-rotate-up"
         }
         else
         {
             langs.style.display = "flex"
-            caret.classList = "fa fa-caret-down"
+            caret.classList = "fa fa-caret-down dropdown-rotate-down"
         }
     }
 

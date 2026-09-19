@@ -161,3 +161,21 @@ ul > li {
   overflow: hidden;
   aspect-ratio: 2/1;
 }
+.dropdown-rotate-down {
+  animation-name: dropdown;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.dropdown-rotate-up {
+  animation-name: dropdown;
+  animation-duration: 0.5s;
+  animation-fill-mode: backwards;
+}
+@keyframes dropdown {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(180deg);
+  }
+}
