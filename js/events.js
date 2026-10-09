@@ -9,10 +9,26 @@ class Events {
             "total": {
                 name: "",
                 icon: "",
-                bottles: 11921,
-                total: 527,
-                unique: 375,
+                bottles: 12696,
+                total: 566,
+                unique: 410,
                 languages: 5,
+            },
+            "pathfinder": {
+                name: "Pathfinder Service Day 2026",
+                icon: "pathfinder.png",
+                bottles: 100,
+                total: 24,
+                unique: 24,
+                languages: 1,
+            },
+            "art": {
+                name: "57th Annual Artist Alley, Chanute 2026",
+                icon: "art.png",
+                bottles: 675,
+                total: 11,
+                unique: 5,
+                languages: 1,
             },
             "fair": {
                 name: "Johnson County Fair 2026",
@@ -43,7 +59,9 @@ class Events {
             }
             container.innerHTML += "<div class='flex-item section event'>\
                                         <div class='section-title'>\
+                                            <div class='img-box'>\
                                             <img src='events/" + this.distributions[distributionKey].icon + "' class='event-icon'>\
+                                            </div>\
                                             <br />" +
                 this.distributions[distributionKey].name +
                 "</div>\

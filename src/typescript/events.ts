@@ -4,29 +4,45 @@
 export class Events
 {
     private distributions: Dictionary<Statistics> = {
-        "total": { // May 15 - Aug 21, 2026 
-            name: "",
-            icon: "",
-            bottles:   11921,
-            total:     527,
-            unique:    375,
-            languages: 5,
+        "total": { // May 15 - Oct 8, 2026 
+            name:       "",
+            icon:       "",
+            bottles:    12696,
+            total:      566,
+            unique:     410,
+            languages:  5,
+        },
+        "pathfinder": {
+            name:       "Pathfinder Service Day 2026",
+            icon:       "pathfinder.png",
+            bottles:    100,
+            total:      24, 
+            unique:     24,
+            languages:  1,
+        },
+        "art": {
+            name:       "57th Annual Artist Alley, Chanute 2026",
+            icon:       "art.png",
+            bottles:    675,
+            total:      11,
+            unique:     5,
+            languages:  1,
         },
         "fair": {
-            name:      "Johnson County Fair 2026",
-            icon:      "fair.jpg",
-            bottles:   1921, 
-            total:     70, 
-            unique:    52, 
-            languages: 2,
+            name:       "Johnson County Fair 2026",
+            icon:       "fair.jpg",
+            bottles:    1921, 
+            total:      70, 
+            unique:     52, 
+            languages:  2,
         },
         "soccer": {
-            name:      "Soccer Tournament 2026",
-            icon:      "soccer.bmp",
-            bottles:   10000, 
-            total:     407, 
-            unique:    304, 
-            languages: 5
+            name:       "Soccer Tournament 2026",
+            icon:       "soccer.bmp",
+            bottles:    10000, 
+            total:      407, 
+            unique:     304, 
+            languages:  5
         },
     }
 
@@ -48,7 +64,9 @@ export class Events
 
             container.innerHTML += "<div class='flex-item section event'>\
                                         <div class='section-title'>\
+                                            <div class='img-box'>\
                                             <img src='events/" + this.distributions[distributionKey].icon + "' class='event-icon'>\
+                                            </div>\
                                             <br />" +
                                             this.distributions[distributionKey].name +
                                         "</div>\

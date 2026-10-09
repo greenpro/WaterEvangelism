@@ -34,7 +34,6 @@ export class LanguageSelection
         var container = document.getElementById("contenents")
         if (!container)
         {
-            console.log("cannot find container")
             return
         }
 
@@ -60,7 +59,6 @@ export class LanguageSelection
             var contenentDiv = document.getElementById(contenentKey)
             if (!contenentDiv)
             {
-                console.log("cannot find contenent div")
                 continue
             }
 
@@ -116,7 +114,6 @@ export class LanguageSelection
             return
         }
 
-        console.log(contenentDiv)
         contenentDiv.innerHTML += "<div id='" + languageKey + "' class='flex-item'>" +
                                   "<button class='button-stand-alone language-selection' onclick='location.href='" + this.redirect(language) + "'>" +
                                   "<img src='countries/" + language.icon + "' class='flag-icon' />" +
@@ -136,8 +133,6 @@ export class LanguageSelection
             return
         }
 
-        console.log(langs.style.display)
-        console.log(langs.style.display == "flex")
         if (langs.style.display == "flex")
         {
             langs.style.display = "none"
