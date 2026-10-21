@@ -11,10 +11,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+        <script>
+            // prettier-ignore
+            (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+                key: "AIzaSyA4dxjqYZyCh5BPEM0p5FCUuqGYGxSR70I"
+            });
+        </script>
+
         <script type="text/javascript">var exports = {};function require() {};</script>
-        <script type="text/javascript" src="js/globalFunctions.js                    "></script>
-        <script type="text/javascript" src="js/events.js"></script>
         <script type="text/javascript" src="js/globalFunctions.js"></script>
+        <script type="text/javascript" src="js/events.js"></script>
 
         <script type="text/javascript" async src="https://cdn.reamaze.com/assets/reamaze-loader.js"></script>
     </head>
@@ -59,11 +65,14 @@
                 <b>Past Locations</b>
             </div>
             <div class="map-frame">
-                <iframe src="https://storage.googleapis.com/maps-solutions-2ol21nyezs/locator-plus/entk/locator-plus.html"
+                <!--iframe src="https://storage.googleapis.com/maps-solutions-2ol21nyezs/locator-plus/entk/locator-plus.html"
                     width="100%" height="100%"
                     style="border:0;"
                     loading="lazy">
-                </iframe>
+                </iframe-->
+                <gmp-map center="39.0413,-94.5918" zoom="9" map-id="DEMO_MAP_ID">
+                    <div id="controls" slot="control-inline-start-block-start"> </div>
+                </gmp-map>
             </div>
         </div>
     </body>
