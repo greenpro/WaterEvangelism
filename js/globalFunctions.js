@@ -140,6 +140,7 @@ async function init() {
             title: location.title,
         });
     }
+    document.getElementById("locations").innerHTML = locations.map(location => `<li>${location.title}</li>`).join("");
 }
 init();
 renderMenu();

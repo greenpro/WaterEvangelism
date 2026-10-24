@@ -151,16 +151,6 @@ ul > li {
 .fa-caret-up {
   padding-left: 20px;
 }
-.map {
-  aspect-ratio: 2/1;
-}
-.map-frame {
-  border-radius: 26px;
-  border-color: #000000;
-  border-style: solid;
-  overflow: hidden;
-  aspect-ratio: 2/1;
-}
 .dropdown-rotate-down {
   animation-name: dropdown-rotate-down;
   animation-duration: 0.5s;
@@ -191,19 +181,54 @@ ul > li {
     transform: rotateZ(180deg);
   }
 }
-/*
- * Always set the map height explicitly to define the size of the div element
- * that contains the map.
- */
+.map {
+  aspect-ratio: 2/1;
+}
+.map-frame {
+  border-radius: 26px;
+  border-color: #000000;
+  border-style: solid;
+  overflow: hidden;
+  aspect-ratio: 2/1;
+  padding: 0px;
+  box-sizing: border-box;
+}
 gmp-map {
   height: 100%;
 }
-/*
-   * Optional: Makes the sample page fill the window.
-   */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+#location-div {
+  position: relative;
+  aspect-ratio: 2/1;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 4px solid #000000;
+  background-color: #9ADFF8;
+  margin: 0px 3% 40px 3%;
+}
+#location-div::before,
+#location-div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 55px;
+  pointer-events: none;
+}
+#location-div::before {
+  top: 0;
+  background: linear-gradient(to bottom, #9ADFF8, rgba(154, 223, 248, 0));
+}
+#location-div::after {
+  bottom: 0;
+  background: linear-gradient(to top, #9ADFF8, rgba(154, 223, 248, 0));
+}
+#locations {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0px 0px 0px 30px;
+  padding: 30px;
 }
