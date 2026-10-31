@@ -12,16 +12,21 @@ html {
   margin: 10px 10%;
   width: 80%;
   padding: 0px;
-  font-family: "Balsamiq Sans", sans-serif;
+  font-family: "Gruppo", sans-serif, bold;
+  font-style: normal;
 }
-#main-title {
+#title #main-title {
   background-color: #40DFAF;
   border-width: 0px 0px 4px 0px;
   border-radius: 26px;
   border-style: solid;
   border-color: #000000;
-  margin: 0px;
-  padding: 20px;
+  padding: 30px;
+  font-size: 60pt;
+}
+#title #sub-title {
+  font-size: 30pt;
+  padding: 10px;
 }
 #menu-div {
   position: relative;
@@ -35,7 +40,7 @@ html {
   top: 10px;
 }
 #menu-div #menu-icon {
-  font-size: 40px;
+  font-size: 30pt;
   padding-bottom: 10px;
 }
 #menu-div #menu-off {
@@ -53,7 +58,7 @@ button {
   width: 100%;
   height: line;
   margin: 0px;
-  font-size: 18pt;
+  font-size: 15pt;
   border-width: 0px 4px 4px 4px;
   background-color: #F88747;
   border-color: #000000;
@@ -101,6 +106,7 @@ button {
   margin: -30px -30px 30px -30px;
   padding: 20px;
   text-align: center;
+  font-size: 40pt;
 }
 .section .section-footer {
   background-color: #FFFFFF;
@@ -110,7 +116,17 @@ button {
   border-color: #000000;
   margin: 30px -30px -30px -30px;
   padding: 20px;
-  font-size: 12pt;
+  font-size: 10pt;
+}
+.event {
+  width: 325px;
+}
+.event .event-icon {
+  max-width: 200px;
+  max-height: 200px;
+}
+.event .section-title {
+  font-size: 24pt;
 }
 footer {
   color: #FFFFFF;
@@ -125,13 +141,6 @@ ul li {
 }
 .flag-icon {
   max-width: 300px;
-  max-height: 200px;
-}
-.event {
-  width: 325px;
-}
-.event .event-icon {
-  max-width: 200px;
   max-height: 200px;
 }
 .flex-container {

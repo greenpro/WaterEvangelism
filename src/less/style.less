@@ -9,8 +9,8 @@
 @color_buttonText:         #000000;
 @color_sectionBg:          #9ADFF8;
 @color_sectionTitle:       #FFFFFF;
-@color_sectionFooter:      #FFFFFF;
-@color_footer:             #FFFFFF;
+@color_sectionFooter:      @color_sectionTitle;
+@color_footer:             @color_sectionTitle;
 
 @border_width: 4px;
 @border_width_title: 0px 0px @border_width 0px;
@@ -19,7 +19,20 @@
 @border_radius: 30px;
 @border_radius_inner: 26px;
 
-@padding_standard: 30px;
+@pad_marg_standard: 30px;
+@pad_subtitle: (@pad_marg_standard / 3);
+@margin_side_title: ((@width_full - @width_title) / 2);
+
+@width_full: 100%;
+@width_title: 80%;
+@width_menu: 30%;
+
+@font_size_h1: 60pt;
+@font_size_h2: (@font_size_h1 / 1.5);
+@font_size_h3: (@font_size_h1 / 2);
+@font_size_h3_5: (@font_size_h1 / 2.5);
+@font_size_h4: (@font_size_h1 / 4);
+@font_size_h5: (@font_size_h1 / 6);
 
 html {
     font-family: "Saira", sans-serif;
@@ -33,20 +46,26 @@ html {
     border-style: solid;
     border-color: @color_border;
     background-color: @color_mottoBg;
-    margin: 10px 10%;
-    width: 80%;
+    margin: 10px @margin_side_title;
+    width: @width_title;
     padding: 0px;
-    font-family: "Balsamiq Sans", sans-serif;
-}
+    font-family: "Gruppo", sans-serif, bold;
+    font-style: normal;
 
-#main-title {
-    background-color: @color_titleBg;
-    border-width: @border_width_title;
-    border-radius: @border_radius_inner;
-    border-style: solid;
-    border-color: @color_border;
-    margin: 0px;
-    padding: 20px;
+    #main-title {
+        background-color: @color_titleBg;
+        border-width: @border_width_title;
+        border-radius: @border_radius_inner;
+        border-style: solid;
+        border-color: @color_border;
+        padding: @pad_marg_standard;
+        font-size: @font_size_h1;
+    }
+
+    #sub-title {
+        font-size: @font_size_h3;
+        padding: @pad_subtitle;
+    }
 }
 
 #menu-div {
@@ -54,7 +73,7 @@ html {
     margin-left: 3%;
 
     #menu {
-        width: 30%;
+        width: @width_menu;
         display: none;
         position: absolute;
         left: 45px;
@@ -62,12 +81,12 @@ html {
     }
 
     #menu-icon {
-        font-size: 40px;
+        font-size: @font_size_h3;
         padding-bottom: 10px;
     }
 
     #menu-off {
-        width: 100%;
+        width: @width_full;
         display: none;
         height: 100%;
         position: fixed;
@@ -84,10 +103,10 @@ a:link {
 }
 
 button {
-    width: 100%;
+    width: @width_full;
     height: line;
     margin: 0px;
-    font-size: 18pt;
+    font-size: @font_size_h4;
     border-width: 0px @border_width @border_width @border_width;
     background-color: @color_buttonBg;
     border-color: @color_border;
@@ -122,7 +141,7 @@ button {
     border-style: solid;
     border-width: @border_width;
     border-radius: @border_radius;
-    padding: @padding_standard;
+    padding: @pad_marg_standard;
     margin: 0px 3% 40px 3%;
     font-size: 20pt;
     align-items: center;
@@ -133,9 +152,10 @@ button {
         border-radius: @border_radius_inner;
         border-style: solid;
         border-color: @color_border;
-        margin: -30px -30px 30px -30px;
+        margin: -@pad_marg_standard -@pad_marg_standard @pad_marg_standard -@pad_marg_standard;
         padding: 20px;
         text-align: center;
+        font-size: @font_size_h2;
     }
 
     .section-footer {
@@ -144,16 +164,30 @@ button {
         border-radius: @border_radius_inner;
         border-style: solid;
         border-color: @color_border;
-        margin: 30px -30px -30px -30px;
+        margin: @pad_marg_standard -@pad_marg_standard -@pad_marg_standard -@pad_marg_standard;
         padding: 20px;
-        font-size: 12pt;
+        font-size: @font_size_h5;
     }
 }
+
+.event {
+    width: 325px;
+    
+    .event-icon {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .section-title {
+        font-size: @font_size_h3_5;
+    }
+}
+
 
 footer {
     color: @color_footer;
     margin-top: 45px;
-    width: 100%; 
+    width: @width_full; 
 }
 
 ul{
@@ -168,15 +202,6 @@ ul{
 .flag-icon {
     max-width: 300px;
     max-height: 200px;
-}
-
-.event {
-    width: 325px;
-    
-    .event-icon {
-        max-width: 200px;
-        max-height: 200px;
-    }
 }
 
 .flex-container {
@@ -253,7 +278,7 @@ ul{
 }
 
 .num-table {
-    width: 100%;
+    width: @width_full;
     border-collapse: collapse;
     
     td {
