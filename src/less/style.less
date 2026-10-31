@@ -49,28 +49,31 @@ html {
     padding: 20px;
 }
 
-#menu {
-    width: 30%;
-    display: none;
-    position: absolute;
-    left: 45px;
-    top: 10px;
-}
 #menu-div {
     position: relative;
     margin-left: 3%;
-}
-#menu-icon {
-    font-size: 40px;
-    padding-bottom: 10px;
-}
-#menu-off {
-    width: 100%;
-    display: none;
-    height: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
+
+    #menu {
+        width: 30%;
+        display: none;
+        position: absolute;
+        left: 45px;
+        top: 10px;
+    }
+
+    #menu-icon {
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+
+    #menu-off {
+        width: 100%;
+        display: none;
+        height: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+    }
 }
 
 a:active
@@ -153,10 +156,13 @@ footer {
     width: 100%; 
 }
 
-ul > li {
-    list-style-image: url("waterbottle.png");
-    margin-bottom: 15px;
-    font-size: 30px;
+ul{
+    li {
+        list-style-image: url("../waterbottle.png");
+        margin-bottom: 15px;
+        font-size: 30px;
+        margin-left: 15px;
+    }
 }
 
 .flag-icon {
@@ -166,14 +172,6 @@ ul > li {
 
 .event {
     width: 325px;
-
-    //.img-box {
-    //    height: 200px;
-    //    width: 200px;
-    //    display: flex;
-    //    justify-content: center;
-    //    align-items: center;
-    //}
     
     .event-icon {
         max-width: 200px;
@@ -195,54 +193,22 @@ ul > li {
     width: 375px;
 }
 
-.fa-caret-down {
-    padding-left: 20px;
-}
-
-.fa-caret-up {
-    padding-left: 20px;
-}
-
-.dropdown-rotate-down {
-    animation-name: dropdown-rotate-down;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    transform-origin: 20pt;
-    transition: transform is ease-in-out;
-}
-.dropdown-rotate-up {
-    animation-name: dropdown-rotate-up;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    transform-origin: 20pt;
-    transition: transform is ease-in-out;
-}
-@keyframes dropdown-rotate-down {
-    from {transform: rotateZ(180deg);}
-    to {transform: rotateZ(0deg);}
-}
-@keyframes dropdown-rotate-up {
-    from {transform: rotateZ(0deg);}
-    to {transform: rotateZ(180deg);}
-}
-
 .map {
     aspect-ratio: 2/1;
-}
 
-.map-frame {
-    border-radius: @border_radius_inner;
-    border-color: @color_border;
-    border-style: solid;
-    overflow: hidden;
-    aspect-ratio: 2/1;
-    padding: 0px;
-    box-sizing: border-box;
-}
+    .map-frame {
+        border-radius: @border_radius_inner;
+        border-color: @color_border;
+        border-style: solid;
+        overflow: hidden;
+        aspect-ratio: 2/1;
+        padding: 0px;
+        box-sizing: border-box;
 
-
-gmp-map {
-    height: 100%;
+        gmp-map {
+            height: 100%;
+        }
+    }
 }
 
 #location-div {
@@ -284,4 +250,57 @@ gmp-map {
     box-sizing: border-box;
     margin: 0px 0px 0px 30px;
     padding: 30px;
+}
+
+.num-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    td {
+        width: 12.5%;
+        font-size: 18pt;
+    }
+
+    :last-child {
+        width: 18pt;
+    }
+
+    .num-name {
+        text-align: right;
+    }
+
+    .num-num {
+        text-align: left;
+    }
+}
+
+.fa-caret-down {
+    padding-left: 20px;
+}
+
+.fa-caret-up {
+    padding-left: 20px;
+}
+
+.dropdown-rotate-down {
+    animation-name: dropdown-rotate-down;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transform-origin: 20pt;
+    transition: transform is ease-in-out;
+}
+.dropdown-rotate-up {
+    animation-name: dropdown-rotate-up;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transform-origin: 20pt;
+    transition: transform is ease-in-out;
+}
+@keyframes dropdown-rotate-down {
+    from {transform: rotateZ(180deg);}
+    to {transform: rotateZ(0deg);}
+}
+@keyframes dropdown-rotate-up {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(180deg);}
 }

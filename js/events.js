@@ -60,7 +60,7 @@ class Events {
             container.innerHTML += "<div class='flex-item section event'>\
                                         <div class='section-title'>\
                                             <div class='img-box'>\
-                                            <img src='events/" + this.distributions[distributionKey].icon + "' class='event-icon'>\
+                                                <img src='events/" + this.distributions[distributionKey].icon + "' class='event-icon'>\
                                             </div>\
                                             <br />" +
                 this.distributions[distributionKey].name +
