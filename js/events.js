@@ -77,15 +77,14 @@ class Events {
         if (!element) {
             return;
         }
-        var i = 0;
-        for (; i <= total - 10; i += 5) {
-            element.innerText = i.toString();
-            await Utilities.sleep(1);
+        var time = 10;
+        var perSecond = 20;
+        var count = time * perSecond;
+        for (var i = 0; i <= count; i++) {
+            element.innerText = Math.floor(total * i / count).toString();
+            await Utilities.sleep(1000 / perSecond);
         }
-        for (; i <= total; i++) {
-            element.innerText = i.toString();
-            await Utilities.sleep(100);
-        }
+        element.innerText = total.toString();
     }
     async updateNumbers() {
         for (let distributionKey in this.distributions) {

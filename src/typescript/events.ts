@@ -87,18 +87,15 @@ export class Events
             return
         }
     
-        var i=0;
-        for (; i<=total-10; i+=5)
+        var time = 10
+        var perSecond = 20
+        var count = time * perSecond
+        for (var i=0; i<=count; i++)
         {
-            element.innerText = i.toString()
-            await Utilities.sleep(1)
+            element.innerText = Math.floor(total*i/count).toString()
+            await Utilities.sleep(1000/perSecond)
         }
-    
-        for (; i<=total; i++)
-        {
-            element.innerText = i.toString()
-            await Utilities.sleep(100)
-        }
+        element.innerText = total.toString()
     }
 
     private async updateNumbers()
