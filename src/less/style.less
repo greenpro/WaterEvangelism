@@ -21,6 +21,7 @@
 
 @pad_marg_standard: 30px;
 @pad_subtitle: (@pad_marg_standard / 3);
+@pad_small: 10pt;
 @margin_side_title: ((@width_full - @width_title) / 2);
 
 @width_full: 100%;
@@ -30,9 +31,9 @@
 @font_size_h1: 60pt;
 @font_size_h2: (@font_size_h1 / 1.5);
 @font_size_h3: (@font_size_h1 / 2);
-@font_size_h3_5: (@font_size_h1 / 2.5);
-@font_size_h4: (@font_size_h1 / 4);
-@font_size_h5: (@font_size_h1 / 6);
+@font_size_h4: (@font_size_h1 / 2.5);
+@font_size_h5: (@font_size_h1 / 4);
+@font_size_h6: (@font_size_h1 / 6);
 
 html {
     font-family: "Saira", sans-serif;
@@ -76,7 +77,7 @@ html {
         width: @width_menu;
         display: none;
         position: absolute;
-        left: 45px;
+        left: @font_size_h3;
         top: 10px;
     }
 
@@ -106,12 +107,12 @@ button {
     width: @width_full;
     height: line;
     margin: 0px;
-    font-size: @font_size_h4;
+    font-size: @font_size_h5;
     border-width: 0px @border_width @border_width @border_width;
     background-color: @color_buttonBg;
     border-color: @color_border;
     color: @color_buttonText;
-    padding: 9pt;
+    padding: @padding_small;
     text-align: left;
 }
 .button-top {
@@ -166,7 +167,7 @@ button {
         border-color: @color_border;
         margin: @pad_marg_standard -@pad_marg_standard -@pad_marg_standard -@pad_marg_standard;
         padding: 20px;
-        font-size: @font_size_h5;
+        font-size: @font_size_h6;
     }
 }
 
@@ -179,7 +180,7 @@ button {
     }
 
     .section-title {
-        font-size: @font_size_h3_5;
+        font-size: @font_size_h4;
     }
 }
 

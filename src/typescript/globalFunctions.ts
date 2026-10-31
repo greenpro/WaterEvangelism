@@ -50,11 +50,7 @@ export async function renderMenu()
     var contact   = ""
     
     var hrefPrefix = ""
-    if (title.includes("Volunteer"))
-    {
-        volunteer = "button-inactive"
-    }
-    else if (title.includes("Kansas"))
+    if (title.includes("Kansas"))
     {
         kc = "button-inactive"
         hrefPrefix = "../"
@@ -63,6 +59,10 @@ export async function renderMenu()
     {
         other = "button-inactive"
         hrefPrefix = "../"
+    }
+    else if (title.includes("Info"))
+    {
+        volunteer = "button-inactive"
     }
     else if (title.includes("40"))
     {

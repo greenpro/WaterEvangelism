@@ -41,16 +41,16 @@ async function renderMenu() {
     var language = "";
     var contact = "";
     var hrefPrefix = "";
-    if (title.includes("Volunteer")) {
-        volunteer = "button-inactive";
-    }
-    else if (title.includes("Kansas")) {
+    if (title.includes("Kansas")) {
         kc = "button-inactive";
         hrefPrefix = "../";
     }
     else if (title.includes("Other")) {
         other = "button-inactive";
         hrefPrefix = "../";
+    }
+    else if (title.includes("Info")) {
+        volunteer = "button-inactive";
     }
     else if (title.includes("40")) {
         days = "button-inactive";
