@@ -129,10 +129,8 @@ async function init() {
     const south = Math.min(...locations.map(location => location.position.lat));
     const east = Math.max(...locations.map(location => location.position.lng));
     const west = Math.min(...locations.map(location => location.position.lng));
-    const centerLat = (north + south) / 2;
-    const centerLng = (east + west) / 2;
-    innerMap.setCenter({ lat: centerLat, lng: centerLng });
-    innerMap.setZoom(6);
+    // Fit the map view so every marker is visible.
+    innerMap.fitBounds({ north, south, east, west });
     for (const location of locations) {
         new AdvancedMarkerElement({
             map: innerMap,
