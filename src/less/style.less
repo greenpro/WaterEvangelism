@@ -18,6 +18,7 @@
 
 @border_radius: 30px;
 @border_radius_inner: 26px;
+@border_radius_small: 15px;
 
 @pad_marg_standard: 30px;
 @pad_subtitle: (@pad_marg_standard / 3);
@@ -112,7 +113,7 @@ button {
     background-color: @color_buttonBg;
     border-color: @color_border;
     color: @color_buttonText;
-    padding: @padding_small;
+    padding: @pad_small;
     text-align: left;
 }
 .button-top {
@@ -124,7 +125,7 @@ button {
 }
 .button-stand-alone {
     border-width: @border_width;
-    border-radius: 15px;
+    border-radius: @border_radius_small;
     width: fit-content;
     margin-left: 3%;
 }
@@ -173,10 +174,22 @@ button {
 
 .event {
     width: 325px;
+
+    .img-box {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: @color_sectionTitle;
+        box-sizing: border-box;
+    }
     
     .event-icon {
-        max-width: 200px;
-        max-height: 200px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
     .section-title {
@@ -210,6 +223,21 @@ ul{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.language-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease;
+
+    &.is-open {
+        grid-template-rows: 1fr;
+    }
+
+    > .flex-container {
+        min-height: 0;
+        overflow: hidden;
+    }
 }
 
 .language-selection {
@@ -248,25 +276,27 @@ ul{
     margin: 0px 3% 40px 3%;
 }
 
-#location-div::before,
-#location-div::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    height: 55px;
-    pointer-events: none;
-}
+#location-div {
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        height: 55px;
+        pointer-events: none;
+    }
 
-#location-div::before {
-    top: 0;
-    background: linear-gradient(to bottom, @color_sectionBg, fade(@color_sectionBg, 0%));
-}
+    &::before {
+        top: 0;
+        background: linear-gradient(to bottom, @color_sectionBg, fade(@color_sectionBg, 0%));
+    }
 
-#location-div::after {
-    bottom: 0;
-    background: linear-gradient(to top, @color_sectionBg, fade(@color_sectionBg, 0%));
+    &::after {
+        bottom: 0;
+        background: linear-gradient(to top, @color_sectionBg, fade(@color_sectionBg, 0%));
+    }
 }
 
 #locations {
@@ -300,33 +330,22 @@ ul{
     }
 }
 
-.fa-caret-down {
-    padding-left: 20px;
+.fa-caret-down,
+.fa-caret-up {
+    margin-left: 20px;
 }
 
-.fa-caret-up {
-    padding-left: 20px;
+.dropdown-rotate-down,
+.dropdown-rotate-up {
+    display: inline-block;
+    transform-origin: center;
+    transition: transform 0.5s ease;
 }
 
 .dropdown-rotate-down {
-    animation-name: dropdown-rotate-down;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    transform-origin: 20pt;
-    transition: transform is ease-in-out;
+    transform: rotateZ(0deg);
 }
+
 .dropdown-rotate-up {
-    animation-name: dropdown-rotate-up;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    transform-origin: 20pt;
-    transition: transform is ease-in-out;
-}
-@keyframes dropdown-rotate-down {
-    from {transform: rotateZ(180deg);}
-    to {transform: rotateZ(0deg);}
-}
-@keyframes dropdown-rotate-up {
-    from {transform: rotateZ(0deg);}
-    to {transform: rotateZ(180deg);}
+    transform: rotateZ(180deg);
 }

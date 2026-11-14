@@ -41,18 +41,20 @@ export class LanguageSelection
         {
             var contenent = this.langList.langList[contenentKey]
 
-            var display = "none"
+            var panelState = ""
             var direction = "dropdown-rotate-down"
             if (contenentKey == "common")
             {
-                display = "flex"
+                panelState = " is-open"
                 direction = "dropdown-rotate-up"
             }
             container.innerHTML += "<div class='section'>" +
                                   "<div class='section-title' onclick=\"LanguageSelection.toggleContenent('" + contenentKey + "')\">" +
                                   contenent.name + "<i id='" + contenentKey + "-caret' class='fa fa-caret-up " + direction + "' aria-hidden='true'></i>" +
                                   "</div>" +
-                                  "<div id='" + contenentKey + "' class='flex-container' style='display: " + display + "'>" +
+                                  "<div class='language-panel" + panelState + "'" + (contenentKey == "common" ? "" : " inert") + ">" +
+                                  "<div id='" + contenentKey + "' class='flex-container'>" +
+                                  "</div>" +
                                   "</div>" +
                                   "</div>"
 
@@ -128,20 +130,23 @@ export class LanguageSelection
     {
         var langs = document.getElementById(key)
         var caret = document.getElementById(key + "-caret")
-        if (langs == null || caret == null)
+        var panel = langs?.parentElement
+        if (panel == null || caret == null)
         {
             return
         }
 
-        if (langs.style.display == "flex")
+        if (panel.classList.contains("is-open"))
         {
-            langs.style.display = "none"
+            panel.classList.remove("is-open")
+            panel.setAttribute("inert", "")
             caret.classList.remove("dropdown-rotate-up")
             caret.classList.add("dropdown-rotate-down")
         }
         else
         {
-            langs.style.display = "flex"
+            panel.classList.add("is-open")
+            panel.removeAttribute("inert")
             caret.classList.remove("dropdown-rotate-down")
             caret.classList.add("dropdown-rotate-up")
         }
